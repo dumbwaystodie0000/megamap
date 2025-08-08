@@ -1,0 +1,7 @@
+export const BRAND_CONSTANTS = {
+  DEFAULT_ZOOM: 12,
+  MIN_ZOOM: 10,
+  MAX_ZOOM: 18,
+  CLUSTER_RADIUS: 50,
+  CLUSTER_MAX_ZOOM: 16,
+} as const; 
