@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, Suspense } from "react"
 import { useSearchParams } from "next/navigation"
 import { Header } from "@/components/header"
 import { GlobalSearchHeader } from "@/components/global-search-header"
@@ -14,7 +14,7 @@ import { generateBuildingDetailsData } from "@/lib/unit-mock-up"
 type ViewMode = "building" | "grid" | "table"
 type PanelType = "none" | "building-details" | "property-details"
 
-export default function PropertyPortal() {
+function PropertyPortalContent() {
   const searchParams = useSearchParams()
   const transactionType = searchParams.get("transactionType") || "For Sale"
   
@@ -121,7 +121,9 @@ export default function PropertyPortal() {
   return (
     <div className="h-screen bg-white">
       <Header />
-      <GlobalSearchHeader showMap={showMap} onShowMapChange={handleShowMapChange} />
+      <Suspense fallback={<div className="h-16 bg-white border-b border-gray-200" />}>
+        <GlobalSearchHeader showMap={showMap} onShowMapChange={handleShowMapChange} />
+      </Suspense>
       <div className={`flex h-[calc(100vh-153px)] ${!showMap ? 'max-w-7xl mx-auto' : ''}`}>
         {" "}
         {/* Adjusted height for sticky elements */}
@@ -167,5 +169,15 @@ export default function PropertyPortal() {
         itemData={saveDialogItemData}
       />
     </div>
+  )
+}
+
+export default function PropertyPortal() {
+  return (
+    <Suspense fallback={<div className="h-screen bg-white flex items-center justify-center">
+      <div className="text-gray-500">Loading...</div>
+    </div>}>
+      <PropertyPortalContent />
+    </Suspense>
   )
 }
