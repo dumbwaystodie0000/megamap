@@ -55,6 +55,7 @@ interface PropertyDetailsPanelProps {
     floorPlan: string
     virtualTour: string
     additionalDetails?: string[]
+    district?: string // Add district field
   }
   onClose: () => void
   onSaveToCollection: (itemType: "property", itemData: any) => void // New prop
@@ -302,7 +303,7 @@ export function PropertyDetailsPanel({ propertyData, onClose, onSaveToCollection
             </div>
             <div className="flex items-center">
               <MapPin className="w-3 h-3 mr-1 text-brand-text-dark/50" /> {/* Updated color */}
-              <span>District: D15 (East Coast)</span>
+              <span>District: {propertyData.district || "N/A"}</span>
             </div>
             <div className="flex items-center">
               <Bed className="w-3 h-3 mr-1 text-brand-text-dark/50" /> {/* Updated color */}

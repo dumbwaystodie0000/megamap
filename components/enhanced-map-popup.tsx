@@ -1,80 +1,134 @@
+"use client";
+
+import { Bed, Bath } from "lucide-react";
+import Image from "next/image";
 import React, { useState, useEffect } from "react";
-import { Bed, Bath, Square, MapPin, Building2, Shield, Calendar, ArrowLeft } from "lucide-react";
 import type { Property } from "../lib/types";
 
+// Define a type for your transacted listings for better type safety
+interface TransactedListing {
+  id: string;
+  images?: string[];
+  price: string;
+  beds: number;
+  baths: number;
+  size: string;
+  agency: string;
+  soldDuration?: string; // e.g., "1 Month 19 Days"
+}
+
 interface EnhancedMapPopupProps {
-  properties: Property[];
+  properties: Property[]; // Assumed to be the ACTIVE listings
   onViewDetails: (property: Property) => void;
   projectId?: string; // Optional project ID to fetch transacted records
+  onClose?: () => void; // Optional callback for closing the popup
+  transactionType?: string; // Add transaction type to determine if this is transactions page
 }
+
+// Helper function to get project name
+const getProjectName = (property: Property) => {
+  return property.name || "this location";
+};
 
 export default function EnhancedMapPopup({
   properties,
   onViewDetails,
   projectId,
+  onClose,
+  transactionType,
 }: EnhancedMapPopupProps) {
   const [showTransacted, setShowTransacted] = useState(false);
-  const [transactedListings, setTransactedListings] = useState<any[]>([]);
+  const [transactedListings, setTransactedListings] = useState<TransactedListing[]>([]);
   const [isLoadingTransacted, setIsLoadingTransacted] = useState(false);
-  const [hasSoldUnits, setHasSoldUnits] = useState(false);
+  const [hasPlbSoldUnits, setHasPlbSoldUnits] = useState(false);
+  
+  // Image carousel state
+  const [currentImageIndex, setCurrentImageIndex] = useState<Record<string, number>>({});
+  
+  // Function to show next image
+  const showNextImage = (itemId: string | number, images: string[] = []) => {
+    if (!images.length) return;
+    
+    setCurrentImageIndex(prev => {
+      const currentIndex = prev[itemId] || 0;
+      return {
+        ...prev,
+        [itemId]: (currentIndex + 1) % images.length
+      };
+    });
+  };
+  
+  // Function to show previous image
+  const showPrevImage = (itemId: string | number, images: string[] = []) => {
+    if (!images.length) return;
+    
+    setCurrentImageIndex(prev => {
+      const currentIndex = prev[itemId] || 0;
+      return {
+        ...prev,
+        [itemId]: (currentIndex - 1 + images.length) % images.length
+      };
+    });
+  };
 
-  // Calculate active listings breakdown
-  const activePlbCount = properties.filter(prop => prop.source === "PLB").length;
-  const activeOtherCount = properties.filter(prop => prop.source !== "PLB").length;
+  const mainProperty = properties[0];
+  const projectName = mainProperty?.name || "this location";
+  
+  // Calculate counts
+  const activeTotalCount = properties.length;
+  const transactedPlbCount = transactedListings.filter(l => l.agency === 'PLB').length;
+  
+  // For single property view
+  const isSingleProperty = activeTotalCount === 1 && !showTransacted;
+  const isPLBListing = isSingleProperty && mainProperty?.source === "PLB";
 
-  // Calculate transacted listings breakdown (PLB only)
-  const transactedPlbCount = transactedListings.filter(listing => listing.agency === "PLB").length;
-
-  // Check if there are PLB sold units for this project
+  // Check if there are PLB sold units for this project to decide if the "View Transacted" button should be shown
   useEffect(() => {
     if (projectId) {
       const checkSoldUnits = async () => {
         try {
+          // Assuming this async import works in your setup
           const { getSoldUnitsByProject } = await import("../lib/unit-mock-up");
           const soldUnits = getSoldUnitsByProject(projectId);
           const plbSoldUnits = soldUnits.filter(unit => unit.agency === "PLB");
-          setHasSoldUnits(plbSoldUnits.length > 0);
+          setHasPlbSoldUnits(plbSoldUnits.length > 0);
         } catch (error) {
-          console.error("Failed to check sold units:", error);
-          setHasSoldUnits(false);
+          console.error("Failed to check for sold units:", error);
+          setHasPlbSoldUnits(false);
         }
       };
       checkSoldUnits();
     } else {
-      setHasSoldUnits(false);
+      setHasPlbSoldUnits(false);
     }
   }, [projectId]);
 
-  // Reset to active listings view when properties change (popup reopened)
+  // Reset view to active listings when the popup is re-opened for a new set of properties
   useEffect(() => {
     setShowTransacted(false);
-    setTransactedListings([]);
-    setIsLoadingTransacted(false);
   }, [properties]);
-  if (properties.length === 0) {
-    return (
-      <div className="p-3 bg-white rounded-lg shadow-lg border border-gray-200">
-        <div className="text-center text-gray-500">
-          <MapPin className="w-6 h-6 mx-auto mb-1 text-gray-400" />
-          <p className="text-sm">No properties found</p>
-        </div>
-      </div>
-    );
-  }
 
-  const mainProperty = properties[0];
-  const isPLB = mainProperty.source === "PLB";
-
-  // Function to load transacted listings
-  const loadTransactedListings = async () => {
-    if (projectId && !isLoadingTransacted && transactedListings.length === 0) {
+  const handleViewTransacted = async () => {
+    setShowTransacted(true);
+    // Fetch only if data isn't already loaded
+    if (transactedListings.length === 0 && projectId) {
       setIsLoadingTransacted(true);
       try {
-        // Import the function dynamically to avoid circular dependencies
         const { generatePopupData } = await import("../lib/unit-mock-up");
         const popupData = generatePopupData(projectId);
-        if (popupData && popupData.soldListings.length > 0) {
-          setTransactedListings(popupData.soldListings);
+        if (popupData && popupData.soldListings) {
+            // A mock duration for styling purposes, replace with real data if available
+            const listingsWithDuration = popupData.soldListings.map((listing: any, index: number) => ({
+                id: listing.id.toString(), // Convert number to string to match interface
+                images: listing.images,
+                price: listing.price,
+                beds: listing.beds,
+                baths: listing.baths,
+                size: listing.size,
+                agency: listing.agency,
+                soldDuration: `Sold in 1 Month ${Math.floor(Math.random() * 20) + 5} Days`
+            }));
+            setTransactedListings(listingsWithDuration);
         }
       } catch (error) {
         console.error("Failed to load transacted listings:", error);
@@ -84,207 +138,263 @@ export default function EnhancedMapPopup({
     }
   };
 
-  const handleViewTransacted = () => {
-    setShowTransacted(true);
-    loadTransactedListings();
-  };
-
   const handleBackToActive = () => {
     setShowTransacted(false);
   };
+  
 
-    // If showing transacted listings
-  if (showTransacted) {
+
+  // Case 1: A single active property is available (e.g., Meyer Mansion)
+  if (activeTotalCount === 1 && !showTransacted) {
+    const property = mainProperty;
     return (
-      <div className="bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden max-w-md">
-        {/* Header */}
-        <div className="px-2 border-b border-gray-100">
-          <p className="text-xs text-gray-600 leading-none">
-            {transactedPlbCount} PLB Transacted Records in {mainProperty.name}
+      <div className="relative map-popup-content bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden w-full max-w-md">
+        {onClose && (
+          <button 
+            onClick={(e) => {
+              e.stopPropagation();
+              onClose();
+            }}
+            className="absolute top-1 right-1 z-10 bg-white/80 hover:bg-white rounded-full p-1"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        )}
+
+        <div className="px-2 py-2 border-b border-gray-100">
+          <p className="px-0 text-xs text-gray-600 leading-none">
+            {transactionType === "transactions" 
+              ? `1 transacted record in ${getProjectName(property)}`
+              : `1 available in ${getProjectName(property)}`
+            }
           </p>
-
-          {/* Back to Available Listings Link */}
-          <div className="mt-2">
-            <button
-              onClick={(e) => {
-                e.stopPropagation();
-                handleBackToActive();
-              }}
-              className="text-blue-600 hover:text-blue-800 text-xs underline"
-            >
-              Back to Available Listings
-            </button>
-          </div>
         </div>
-        
-
-        {isLoadingTransacted ? (
-          <div className="text-center py-4">
-            <div className="text-sm text-gray-500">Loading transacted records...</div>
-          </div>
-        ) : transactedPlbCount > 0 ? (
-          <div className="max-h-80 overflow-y-auto">
-            {transactedListings.filter(listing => listing.agency === "PLB").slice(0, 3).map((listing, index) => (
-              <div 
-                key={listing.id} 
-                className={`border-b border-gray-100 last:border-b-0 cursor-pointer hover:bg-gray-50 transition-colors border-l-4 border-l-[#123B79]`}
-              >
-                <div className="flex items-center justify-center">
-                  {/* Property Image - Left side */}
-                  <div className="relative w-2/5 h-24 m-1.5 rounded-lg overflow-hidden flex-shrink-0 bg-gray-100">
-                    <img
-                      src={listing.images?.[0] || "/placeholder.svg"}
-                      alt="Property"
-                      className="w-full h-full object-cover"
-                    />
-                    <div className="absolute top-1 left-1">
-                      <span className="px-1.5 py-0.5 h-4 text-[9px] rounded font-bold bg-[#123B79] text-white">
-                        PLB
-                      </span>
+        <div className="flex items-center justify-center">
+            {/* Property Image */}
+            <div className="relative w-2/5 h-24 m-1.5 rounded-lg overflow-hidden flex-shrink-0">
+                <Image
+                    src={property.images?.[currentImageIndex[property.id] || 0] || "/placeholder.svg"}
+                    alt={property.name}
+                    fill
+                    style={{ objectFit: "cover" }}
+                    className="transition-transform duration-300 hover:scale-105"
+                />
+                
+                {/* PLB Badge for PLB listings */}
+                {isPLBListing && (
+                  <div className="absolute top-1 left-1">
+                    <div className="bg-[#123B79] text-white text-[10px] font-bold px-1.5 rounded flex items-center justify-center h-4">
+                      PLB
                     </div>
                   </div>
-
-                  {/* Property Details - Right side */}
-                  <div className="flex-1 px-1 pr-3 flex flex-col justify-start min-w-0">
-                    <div className="space-y-0.5">
-                      {/* Price */}
-                      <div>
-                        <p className="font-bold text-xs text-gray-900 mb-0.5">
-                          <span className="text-xs font-semibold text-gray-500">
-                              {listing.price.includes('/month') ? 'Rented at:' : 'Sold at:'}
-                          </span>
-                          <br />{listing.price}
-                        </p>
-                      </div>
-
-                      {/* Key Specs */}
-                      <div className="flex items-center gap-4 text-xs text-gray-600">
-                        <div className="flex items-center gap-1">
-                          <Bed className="h-3 w-3 flex-shrink-0" />
-                          <span>{listing.beds}</span>
-                        </div>
-                        <div className="flex items-center gap-1">
-                          <Bath className="h-3 w-3 flex-shrink-0" />
-                          <span>{listing.baths}</span>
-                        </div>
-                        <div className="flex items-center gap-1">
-                          <span>{listing.size}</span>
-                        </div>
-                      </div>
-
-                      {/* Sold Duration */}
-                      <div className="text-xs text-gray-400">
-                        Sold in 1 Month 19 Days
-                      </div>
-                    </div>
+                )}
+                
+                {/* Navigation arrows for image carousel */}
+                {property.images && property.images.length > 1 && (
+                  <div className="absolute inset-0 flex items-center justify-between opacity-0 hover:opacity-100 transition-opacity">
+                      <button 
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          showPrevImage(property.id, property.images);
+                        }}
+                        className="p-1 bg-white/80 rounded-full ml-1 cursor-pointer hover:bg-white/100"
+                      >
+                          <div className="w-2 h-2 bg-gray-600 rounded-full"></div>
+                      </button>
+                      <button 
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          showNextImage(property.id, property.images);
+                        }}
+                        className="p-1 bg-white/80 rounded-full mr-1 cursor-pointer hover:bg-white/100"
+                      >
+                          <div className="w-2 h-2 bg-gray-600 rounded-full"></div>
+                      </button>
                   </div>
+                )}
+            </div>
+            {/* Property Details */}
+            <div className="flex-1 px-1 pr-3 flex flex-col justify-start min-w-0">
+              <div className="space-y-0.5">
+              <p className="font-bold text-sm text-gray-900">
+                  <span className="text-xs font-semibold text-gray-500">
+                    {transactionType === "transactions" ? "Transacted Price:" : "Asking Price:"}
+                  </span>
+                  <br />{property.price}
+                </p>
+                {/* Bedroom, Bathroom, Size */}
+              <div className="flex items-center gap-3 text-xs text-gray-600">
+                <div className="flex items-center gap-1">
+                  <Bed className="h-3 w-3 flex-shrink-0" />
+                    <span>{property.beds}</span>
+                </div>
+                <div className="flex items-center gap-1">
+                  <Bath className="h-3 w-3 flex-shrink-0" />
+                    <span>{property.baths}</span>
+                </div>
+                <div className="flex items-center gap-1">
+                    <span>{property.size}</span>
                 </div>
               </div>
-            ))}
-          </div>
-        ) : (
-          <div className="text-center py-4">
-            <div className="text-sm text-gray-500">No PLB transacted records found</div>
-          </div>
-        )}
+              </div>
+            </div>
+        </div>
       </div>
     );
   }
 
-  // Active listings view
-  return (
-    <div 
-      className="bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-200 max-w-md"
-    >
-      {/* Header */}
-      <div className="px-2 border-b border-gray-100">
-        <p className="text-xs text-gray-600 leading-none">
-          {properties.length} available in {mainProperty.name}
-        </p>
+  // Case 2 & 3: Multiple listings view (Active or Transacted for e.g., The Canopy)
+  const displayedListings = showTransacted ? transactedListings : properties;
 
-        {/* Show breakdown for active listings */}
-          {activePlbCount > 0 && activeOtherCount > 0 && (
-          <p className="text-xs text-gray-500 leading-none mt-1">
-            {activePlbCount} PLB • {activeOtherCount} Other
-          </p>
+  return (
+    <div className="relative map-popup-content bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden w-full max-w-sm">
+        {onClose && (
+          <button 
+            onClick={(e) => {
+              e.stopPropagation();
+              onClose();
+            }}
+            className="absolute top-1 right-1 z-10 bg-white/80 hover:bg-white rounded-full p-1"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
         )}
 
-        {/* View Transacted Records Link */}
-          {projectId && hasSoldUnits && (
-            <div className="mt-2">
-              <button
-                onClick={(e) => {
-                  e.stopPropagation();
-                  handleViewTransacted();
-                }}
-                className="text-blue-600 hover:text-blue-800 text-xs underline"
+        {/* Header Section */}
+        <div className="px-2 py-2 border-b border-gray-100">
+            <p className="px-0 text-xs text-gray-600 leading-none">
+                {transactionType === "transactions"
+                ? `${activeTotalCount} transacted records in ${getProjectName(mainProperty)}`
+                : showTransacted
+                ? `${transactedPlbCount} PLB Transacted Records in ${getProjectName(mainProperty)}`
+                : `${activeTotalCount} available in ${getProjectName(mainProperty)}`}
+            </p>
+            {showTransacted ? (
+                <button
+                    onClick={handleBackToActive}
+                    className="text-xs text-blue-600 hover:text-blue-800 underline mt-1"
                 >
-                View PLB Transacted Records
-              </button>
-            </div>
-          )}
-      </div>
+                    Back to Available Listings
+                </button>
+            ) : (
+                hasPlbSoldUnits && (
+                    <button
+                        onClick={handleViewTransacted}
+                        className="text-xs text-blue-600 hover:text-blue-800 underline mt-1"
+                    >
+                        View PLB Transacted Records
+                    </button>
+                )
+            )}
+        </div>
 
-      <div className="max-h-80 overflow-y-auto">
-        {properties.map((property, index) => (
-          <div 
-            key={index}
-            className={`border-b border-gray-100 last:border-b-0 cursor-pointer hover:bg-gray-50 transition-colors ${
-              property.agent?.agencyName === "PLB" ? "border-l-4 border-l-[#123B79]" : "border-l-4 border-l-white"
-            }`}
-            onClick={() => onViewDetails(property)}
-          >
-            <div className="flex items-center justify-center">
-              {/* Property Image - Left side */}
-              <div className="relative w-2/5 h-24 m-1.5 rounded-lg overflow-hidden flex-shrink-0 bg-gray-100">
-                <img
-                  src={property.images?.[0] || "/placeholder.svg"}
-                  alt={property.name}
-                  className="w-full h-full object-cover"
-                />
-                {/* PLB Badge */}
-                <div className="absolute top-1 left-1">
-                  {property.agent?.agencyName === "PLB" && (
-                    <span className="px-1.5 py-0.5 h-4 text-[9px] rounded font-bold bg-[#123B79] text-white">
-                      PLB
-                    </span>
-                  )}
-                </div>
-              </div>
+        {/* Listings Section */}
+        <div className="max-h-[320px] overflow-y-auto">
+            {isLoadingTransacted ? (
+                <div className="p-4 text-center text-gray-500">Loading...</div>
+            ) : (
+                displayedListings.map((item, index) => {
+                    const isPLB = showTransacted ? (item as TransactedListing).agency === 'PLB' : (item as Property).source === 'PLB';
+                    const key = `item-${item.id}-${index}`;
+                    
+                    const itemAsProperty = item as Property;
+                    const itemAsTransacted = item as TransactedListing;
 
-              {/* Property Details - Right side */}
-              <div className="flex-1 px-1 pr-3 flex flex-col justify-start min-w-0">
-                <div className="space-y-0.5">
-                  {/* Price */}
-                  <div>
-                    <p className="font-bold text-xs text-gray-900 mb-0.5">
-                      <span className="text-xs font-semibold text-gray-500">
-                          Asking Price:
-                      </span>
-                      <br />{property.price}
-                    </p>
-                  </div>
+                    return (
+                        <div
+                            key={key}
+                            className={`border-b border-gray-100 last:border-b-0 cursor-pointer hover:bg-gray-50 ${isPLB ? 'border-l-4 border-l-[#123B79]' : 'border-l-4 border-l-white'}`}
+                            onClick={() => !showTransacted && onViewDetails(itemAsProperty)}
+                        >
+                            <div className="flex items-center justify-center">
+                                {/* Property Image - Left side */}
+                                <div className="relative w-2/5 h-24 m-1.5 rounded-lg overflow-hidden flex-shrink-0">
+                                    <Image
+                                        src={item.images?.[currentImageIndex[item.id] || 0] || "/placeholder.svg"}
+                                        alt={projectName}
+                                        fill
+                                        style={{ objectFit: "cover" }}
+                                        className="transition-transform duration-300 hover:scale-105"
+                                    />
+                                    {isPLB && (
+                                        <div className="absolute top-1 left-1">
+                                            <div className="bg-[#123B79] text-white text-[10px] font-bold px-1.5 rounded flex items-center justify-center h-4">
+                                                PLB
+                                            </div>
+                                        </div>
+                                    )}
+                                    
+                                    {/* Navigation arrows for image carousel */}
+                                    {item.images && item.images.length > 1 && (
+                                      <div className="absolute inset-0 flex items-center justify-between opacity-0 hover:opacity-100 transition-opacity">
+                                          <button 
+                                            onClick={(e) => {
+                                              e.stopPropagation();
+                                              showPrevImage(item.id, item.images);
+                                            }}
+                                            className="p-1 bg-white/80 rounded-full ml-1 cursor-pointer hover:bg-white/100"
+                                          >
+                                              <div className="w-2 h-2 bg-gray-600 rounded-full"></div>
+                                          </button>
+                                          <button 
+                                            onClick={(e) => {
+                                              e.stopPropagation();
+                                              showNextImage(item.id, item.images);
+                                            }}
+                                            className="p-1 bg-white/80 rounded-full mr-1 cursor-pointer hover:bg-white/100"
+                                          >
+                                              <div className="w-2 h-2 bg-gray-600 rounded-full"></div>
+                                          </button>
+                                      </div>
+                                    )}
+                                </div>
 
-                  {/* Key Specs */}
-                  <div className="flex items-center gap-4 text-xs text-gray-600">
-                    <div className="flex items-center gap-1">
-                      <Bed className="h-3 w-3 flex-shrink-0" />
-                      <span>{property.beds}</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Bath className="h-3 w-3 flex-shrink-0" />
-                      <span>{property.baths}</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <span>{property.size}</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
+                                {/* Property Details - Right side */}
+                                <div className="flex-1 px-1 pr-3 flex flex-col justify-start min-w-0">
+                                    <div className="space-y-0.5">
+                                        <p className="font-bold text-sm text-gray-900">
+                                            <span className="text-xs font-semibold text-gray-500">
+                                                {showTransacted ? 'Sold at:' : 'Asking Price:'}
+                                            </span>
+                                            <br />{typeof item.price === 'string' ? item.price : item.price}
+                                        </p>
+
+                                        {/* Bedroom, Bathroom, Size */}
+                                        <div className="flex items-center gap-3 text-xs text-gray-600">
+                                            <div className="flex items-center gap-1">
+                                                <Bed className="h-3 w-3 flex-shrink-0" />
+                                                <span>{item.beds}</span>
+                                            </div>
+                                            <div className="flex items-center gap-1">
+                                                <Bath className="h-3 w-3 flex-shrink-0" />
+                                                <span>{item.baths}</span>
+                                            </div>
+                                            <span>{item.size}</span>
+                                        </div>
+                                        
+                                        {/* Sold Duration */}
+                                        {showTransacted && itemAsTransacted.soldDuration && (
+                                            <p className="text-xs text-gray-400">
+                                                {itemAsTransacted.soldDuration}
+                                            </p>
+                                        )}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    );
+                })
+            )}
+             {displayedListings.length === 0 && !isLoadingTransacted && (
+                <div className="p-4 text-center text-gray-500">No records to display.</div>
+            )}
+        </div>
     </div>
   );
-} 
+}

@@ -42,6 +42,17 @@ function ClusterLayer({
 }) {
   const [clusters, setClusters] = useState<any[]>([]);
   const [zoom, setZoom] = useState(12);
+  const mapInstanceRef = useRef<any>(null);
+  
+  // Get reference to the map
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    
+    import("react-leaflet").then(({ useMap }) => {
+      const map = useMap();
+      mapInstanceRef.current = map;
+    });
+  }, []);
 
   // Initialize custom clustering by project
   useEffect(() => {
@@ -173,18 +184,23 @@ function ClusterLayer({
               key={`cluster-${index}`}
               position={[lat, lng]}
               icon={getClusterIcon(cluster)}
-              eventHandlers={{
-                click: () => {
-                  // Handle cluster click
-                  console.log("Cluster clicked:", cluster);
-                },
-              }}
+                          eventHandlers={{
+              click: () => {
+                // Handle cluster click
+                console.log("Cluster clicked:", cluster);
+                // Center map on cluster
+                if (mapInstanceRef.current) {
+                  mapInstanceRef.current.flyTo([lat, lng], 15);
+                }
+              },
+            }}
             >
               {!isCollectionView && (
                 <Popup>
                   <EnhancedMapPopup
                     properties={clusterProperties}
                     onViewDetails={onMarkerClick}
+                    onClose={() => mapInstanceRef.current?.closePopup()}
                   />
                 </Popup>
               )}
@@ -210,6 +226,10 @@ function ClusterLayer({
             eventHandlers={{
               click: () => {
                 onMarkerClick(property);
+                // Center map on marker
+                if (mapInstanceRef.current) {
+                  mapInstanceRef.current.flyTo([lat, lng], 15);
+                }
               },
               mouseover: () => onMarkerHover(property),
               mouseout: () => onMarkerHover(null),
@@ -220,6 +240,7 @@ function ClusterLayer({
                 <EnhancedMapPopup
                   properties={propertiesAtLocation}
                   onViewDetails={onMarkerClick}
+                  onClose={() => mapInstanceRef.current?.closePopup()}
                 />
               </Popup>
             )}

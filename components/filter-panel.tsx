@@ -40,14 +40,14 @@ export const FilterPanel = ({ isOpen, onClose, searchParams, updateSearchParams 
   const selectedPropertyMainType = (searchParams.get("propertyMainType") || "all") as keyof typeof PROPERTY_SUB_TYPES
   const selectedPropertySubTypes = searchParams.get("propertySubTypes")?.split(",").filter(Boolean) || []
   const selectedBeds = searchParams.get("beds")?.split(",").filter(Boolean) || []
-  const selectedBathroom = searchParams.get("bathroom") || ""
+  const selectedBathrooms = searchParams.get("bathrooms")?.split(",").filter(Boolean) || []
   const selectedTenure = searchParams.get("tenure") || ""
   const selectedFloorLevel = searchParams.get("floorLevel") || ""
   const selectedDistanceToMRT = searchParams.get("distanceToMRT") || "any"
   const selectedLeaseTerm = searchParams.get("leaseTerm")?.split(",").filter(Boolean) || []
   const selectedAvailability = searchParams.get("availability") || ""
   const selectedFurnishing = searchParams.get("furnishing") || ""
-  const selectedDistrict = searchParams.get("district") || "all"
+  const selectedDistricts = searchParams.get("districts")?.split(",").filter(Boolean) || []
   const selectedAgent = searchParams.get("agent") || "All Agents"
   const selectedMinPsf = searchParams.get("minPsf") || "0" // Default to "0" for "No Min"
   const selectedMaxPsf = searchParams.get("maxPsf") || "No Limit" // Default to "No Limit" for "No Max"
@@ -84,7 +84,9 @@ export const FilterPanel = ({ isOpen, onClose, searchParams, updateSearchParams 
     setLocalKeyword(searchParams.get("keyword") || "")
   }, [searchParams]) // Re-run effect when searchParams change
 
-  const toggleSection = (section: string) => {
+  type SectionKey = keyof typeof expandedSections;
+
+  const toggleSection = (section: SectionKey) => {
     setExpandedSections((prev) => ({
       ...prev,
       [section]: !prev[section],
@@ -112,7 +114,10 @@ export const FilterPanel = ({ isOpen, onClose, searchParams, updateSearchParams 
   }
 
   const handleBathroomChange = (bath: string) => {
-    updateSearchParams({ bathroom: selectedBathroom === bath ? null : bath })
+    const newBathrooms = selectedBathrooms.includes(bath) 
+      ? selectedBathrooms.filter(b => b !== bath) 
+      : [...selectedBathrooms, bath]
+    updateSearchParams({ bathrooms: newBathrooms.length > 0 ? newBathrooms : null })
   }
 
   const handleTenureChange = (tenure: string) => {
@@ -140,8 +145,20 @@ export const FilterPanel = ({ isOpen, onClose, searchParams, updateSearchParams 
     updateSearchParams({ furnishing: selectedFurnishing === furnishing ? null : furnishing })
   }
 
-  const handleDistrictChange = (district: string) => {
-    updateSearchParams({ district: district === "all" ? null : district })
+  const handleDistrictChange = (district: string, checked: boolean) => {
+    let newDistricts = [...selectedDistricts]
+    
+    if (checked) {
+      // Add district if it's not already in the array
+      if (!newDistricts.includes(district)) {
+        newDistricts.push(district)
+      }
+    } else {
+      // Remove district if it's in the array
+      newDistricts = newDistricts.filter(d => d !== district)
+    }
+    
+    updateSearchParams({ districts: newDistricts.length > 0 ? newDistricts : null })
   }
 
   const handleAgentChange = (agent: string) => {
@@ -198,7 +215,7 @@ export const FilterPanel = ({ isOpen, onClose, searchParams, updateSearchParams 
       beds: null,
       propertyMainType: null,
       propertySubTypes: null,
-      bathroom: null,
+      bathrooms: null,
       tenure: null,
       buildYear: null, // Clears minYear and maxYear
       floorLevel: null,
@@ -208,7 +225,7 @@ export const FilterPanel = ({ isOpen, onClose, searchParams, updateSearchParams 
       availability: null,
       furnishing: null,
       keyword: null,
-      district: null,
+      districts: null,
       projectName: null,
       agent: null,
       minYear: null, // Explicitly clear min/max year
@@ -223,36 +240,40 @@ export const FilterPanel = ({ isOpen, onClose, searchParams, updateSearchParams 
 
   const propertySubTypes = PROPERTY_SUB_TYPES
 
-  const districts = [
-    "D01",
-    "D02",
-    "D03",
-    "D04",
-    "D05",
-    "D06",
-    "D07",
-    "D08",
-    "D09",
-    "D10",
-    "D11",
-    "D12",
-    "D13",
-    "D14",
-    "D15",
-    "D16",
-    "D17",
-    "D18",
-    "D19",
-    "D20",
-    "D21",
-    "D22",
-    "D23",
-    "D24",
-    "D25",
-    "D26",
-    "D27",
-    "D28",
+  // District mapping with location information
+  const districtMapping = [
+    { code: "D01", location: "Raffles Place, Cecil, Marina, People's Park" },
+    { code: "D02", location: "Anson, Tanjong Pagar" },
+    { code: "D03", location: "Queenstown, Tiong Bahru" },
+    { code: "D04", location: "Telok Blangah, Harbourfront" },
+    { code: "D05", location: "Pasir Panjang, Hong Leong Garden, Clementi New Town" },
+    { code: "D06", location: "High Street, Beach Road" },
+    { code: "D07", location: "Middle Road, Golden Mile" },
+    { code: "D08", location: "Little India" },
+    { code: "D09", location: "Orchard, Cairnhill, River Valley" },
+    { code: "D10", location: "Ardmore, Bukit Timah, Holland Road, Tanglin" },
+    { code: "D11", location: "Watten Estate, Novena, Thomson" },
+    { code: "D12", location: "Balestier, Toa Payoh, Serangoon" },
+    { code: "D13", location: "Macpherson, Braddell" },
+    { code: "D14", location: "Geylang, Eunos" },
+    { code: "D15", location: "Katong, Joo Chiat, Amber Road" },
+    { code: "D16", location: "Bedok, Upper East Coast, Eastwood, Kew Drive" },
+    { code: "D17", location: "Loyang, Changi" },
+    { code: "D18", location: "Tampines, Pasir Ris" },
+    { code: "D19", location: "Serangoon Garden, Hougang, Punggol" },
+    { code: "D20", location: "Bishan, Ang Mo Kio" },
+    { code: "D21", location: "Upper Bukit Timah, Clementi Park, Ulu Pandan" },
+    { code: "D22", location: "Jurong" },
+    { code: "D23", location: "Hillview, Dairy Farm, Bukit Panjang, Choa Chu Kang" },
+    { code: "D24", location: "Lim Chu Kang, Tengah" },
+    { code: "D25", location: "Kranji, Woodgrove" },
+    { code: "D26", location: "Upper Thomson, Springleaf" },
+    { code: "D27", location: "Yishun, Sembawang" },
+    { code: "D28", location: "Seletar" }
   ]
+  
+  // Extract just the district codes for backward compatibility
+  const districts = districtMapping.map(d => d.code)
 
   const agents = ["All Agents", "Sarah Lim", "John Tan", "Emily Wong", "David Lee"]
 
@@ -276,14 +297,22 @@ export const FilterPanel = ({ isOpen, onClose, searchParams, updateSearchParams 
               <Button
                 variant={transactionType === "For Sale" ? "default" : "outline"}
                 onClick={() => handleTransactionTypeChange("For Sale")}
-                className="flex-1 bg-brand-primary-dark text-white hover:bg-brand-primary-dark/90"
+                className={`flex-1 ${
+                  transactionType === "For Sale" 
+                    ? "bg-brand-primary-dark text-white hover:bg-brand-primary-dark/90" 
+                    : "bg-transparent text-brand-primary-dark border-brand-primary-dark hover:bg-gray-200"
+                }`}
               >
                 Buy
               </Button>
               <Button
                 variant={transactionType === "For Rent" ? "default" : "outline"}
                 onClick={() => handleTransactionTypeChange("For Rent")}
-                className="flex-1 bg-transparent text-brand-text-dark border-brand-text-dark/20 hover:bg-brand-background-light"
+                className={`flex-1 ${
+                  transactionType === "For Rent" 
+                    ? "bg-brand-primary-dark text-white hover:bg-brand-primary-dark/90" 
+                    : "bg-transparent text-brand-primary-dark border-brand-primary-dark hover:bg-gray-200"
+                }`}
               >
                 Rent
               </Button>
@@ -316,19 +345,44 @@ export const FilterPanel = ({ isOpen, onClose, searchParams, updateSearchParams 
               isExpanded={expandedSections.district}
               onToggle={() => toggleSection("district")}
             >
-              <Select value={selectedDistrict} onValueChange={handleDistrictChange}>
-                <SelectTrigger className="w-full border-brand-text-dark/20 text-brand-text-dark">
-                  <SelectValue placeholder="Select District" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="all">All Districts</SelectItem>
-                  {districts.map((d) => (
-                    <SelectItem key={d} value={d}>
-                      {d}
-                    </SelectItem>
+              <div className="space-y-3">
+                <div className="flex items-center space-x-2">
+                  <Checkbox
+                    id="select-all-districts"
+                    checked={selectedDistricts.length === districts.length}
+                    onCheckedChange={(checked) => {
+                      if (checked) {
+                        updateSearchParams({ districts: [...districts] })
+                      } else {
+                        updateSearchParams({ districts: null })
+                      }
+                    }}
+                  />
+                  <label htmlFor="select-all-districts" className="text-sm text-brand-text-dark">
+                    Select All Districts
+                  </label>
+                </div>
+                <div className="grid grid-cols-2 gap-x-4 gap-y-2 max-h-[300px] overflow-y-auto pr-2">
+                  {districtMapping.map((district) => (
+                    <div key={district.code} className="flex items-start space-x-2 h-full py-1">
+                      <Checkbox
+                        id={`district-${district.code}`}
+                        checked={selectedDistricts.includes(district.code)}
+                        onCheckedChange={(checked) => handleDistrictChange(district.code, checked as boolean)}
+                        className="mt-0.5 flex-shrink-0"
+                      />
+                      <div className="min-w-0 flex-1">
+                        <label 
+                          htmlFor={`district-${district.code}`} 
+                          className="text-xs text-brand-text-dark leading-tight line-clamp-2 h-10 flex flex-col"
+                        >
+                          <span className="text-sm">{district.code} - {district.location} </span>
+                        </label>
+                      </div>
+                    </div>
                   ))}
-                </SelectContent>
-              </Select>
+                </div>
+              </div>
             </FilterSection>
 
             {/* Property Type */}
@@ -351,7 +405,7 @@ export const FilterPanel = ({ isOpen, onClose, searchParams, updateSearchParams 
                           : "bg-transparent text-brand-text-dark border-brand-text-dark/20 hover:bg-brand-background-light"
                       }`}
                     >
-                      {type.charAt(0).toUpperCase() + type.slice(1)}
+                      {type === "hdb" ? "HDB" : type.charAt(0).toUpperCase() + type.slice(1)}
                     </Button>
                   ))}
                 </div>
@@ -368,7 +422,7 @@ export const FilterPanel = ({ isOpen, onClose, searchParams, updateSearchParams 
                         onCheckedChange={(checked) => {
                           if (checked) {
                             updateSearchParams({
-                              propertySubTypes: PROPERTY_SUB_TYPES[selectedPropertyMainType],
+                              propertySubTypes: [...PROPERTY_SUB_TYPES[selectedPropertyMainType]],
                             })
                           } else {
                             updateSearchParams({ propertySubTypes: null })
@@ -484,11 +538,11 @@ export const FilterPanel = ({ isOpen, onClose, searchParams, updateSearchParams 
                 {["1", "2", "3", "4", "5+"].map((bath) => (
                   <Button
                     key={bath}
-                    variant={selectedBathroom === bath ? "default" : "outline"}
+                    variant={selectedBathrooms.includes(bath) ? "default" : "outline"}
                     size="sm"
                     onClick={() => handleBathroomChange(bath)}
                     className={`${
-                      selectedBathroom.includes(bath)
+                      selectedBathrooms.includes(bath)
                         ? "bg-brand-primary-dark text-white hover:bg-brand-primary-dark/90"
                         : "bg-transparent text-brand-text-dark border-brand-text-dark/20 hover:bg-brand-background-light"
                     }`}

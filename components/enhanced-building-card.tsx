@@ -135,9 +135,15 @@ export const EnhancedBuildingCard = ({
         </Button>
 
         {/* Project Name, Address, Built Year, and Tenure Overlay */}
-        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-brand-text-dark to-transparent p-4 group-hover:from-brand-text-dark/90 transition-all duration-200">
-          <h3 className="text-xl font-bold text-white mb-1 group-hover:text-white/90 transition-colors duration-200">{name}</h3>
-          <div className="flex items-center text-white/90 text-xs mb-2 group-hover:text-white/80 transition-colors duration-200">
+        <div className={`absolute bottom-0 left-0 right-0 bg-gradient-to-t from-brand-text-dark to-transparent group-hover:from-brand-text-dark/90 transition-all duration-200 ${
+          showMap ? 'p-4' : 'p-2'
+        }`}>
+          <h3 className={`font-bold text-white group-hover:text-white/90 transition-colors duration-200 ${
+            showMap ? 'text-xl mb-1' : 'text-lg mb-0.5'
+          }`}>{name}</h3>
+          <div className={`flex items-center text-white/90 text-xs group-hover:text-white/80 transition-colors duration-200 ${
+            showMap ? 'mb-2' : 'mb-1'
+          }`}>
             <MapPin className="w-2 h-2 mr-1" />
             {address}
           </div>

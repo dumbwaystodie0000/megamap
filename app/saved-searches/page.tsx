@@ -7,11 +7,12 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
 import { mockSavedSearches, mockFolders } from "@/lib/mock-data" // Import mock data
+import { useRouter } from "next/navigation"
 
 export default function SavedSearchesPage() {
   const [savedSearches] = useState(mockSavedSearches) // Use imported mock data
-
   const [folders] = useState(mockFolders) // Use imported mock data
+  const router = useRouter()
 
   return (
     <div className="min-h-screen bg-brand-background-light">
@@ -83,6 +84,8 @@ export default function SavedSearchesPage() {
 }
 
 function SavedSearchCard({ search }: { search: any }) {
+  const router = useRouter()
+  
   const getNotificationColor = (notification: string) => {
     switch (notification) {
       case "Daily":
@@ -94,6 +97,48 @@ function SavedSearchCard({ search }: { search: any }) {
       default:
         return "bg-brand-background-light text-brand-text-dark" // Updated colors
     }
+  }
+  
+  const handleViewSearch = () => {
+    // In a real app, we would retrieve the actual filters from the database
+    // For now, we'll use the mock data to construct a URL with search parameters
+    
+    // Create URL search params based on the saved search
+    const params = new URLSearchParams()
+    
+    // Add parameters from the mock data
+    if (search.priceRange) {
+      const [minPrice, maxPrice] = search.priceRange.replace(/\$/g, '').split(' - ')
+      params.set('minPrice', minPrice.replace(/,/g, ''))
+      params.set('maxPrice', maxPrice.replace(/,/g, ''))
+    }
+    
+    if (search.bedrooms) {
+      const beds = search.bedrooms.replace(/ bedrooms?/g, '').split(', ')
+      params.set('beds', beds.join(','))
+    }
+    
+    if (search.propertyType) {
+      const propertyTypes = search.propertyType.split(', ')
+      if (propertyTypes.includes('Condominium')) {
+        params.set('propertyMainType', 'condo')
+        params.set('propertySubTypes', 'Condominium')
+      } else if (propertyTypes.includes('Landed')) {
+        params.set('propertyMainType', 'landed')
+      } else if (propertyTypes.includes('HDB')) {
+        params.set('propertyMainType', 'hdb')
+      }
+    }
+    
+    if (search.location) {
+      const districts = search.location.match(/D\d+/g)
+      if (districts && districts.length > 0) {
+        params.set('districts', districts.join(','))
+      }
+    }
+    
+    // Navigate to the search page with these parameters
+    router.push(`/?${params.toString()}`)
   }
 
   return (
@@ -124,9 +169,12 @@ function SavedSearchCard({ search }: { search: any }) {
         </div>
 
         <div className="flex items-center space-x-2">
-          <Button variant="ghost" size="sm" className="text-brand-text-dark/70 hover:text-brand-primary-dark">
-            {" "}
-            {/* Updated colors */}
+          <Button 
+            variant="ghost" 
+            size="sm" 
+            className="text-brand-text-dark/70 hover:text-brand-primary-dark"
+            onClick={handleViewSearch}
+          >
             <Eye className="w-4 h-4" />
           </Button>
           <Button variant="ghost" size="sm" className="text-brand-text-dark/70 hover:text-brand-primary-dark">

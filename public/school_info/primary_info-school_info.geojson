@@ -1,0 +1,2153 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.800040119743,1.4426347903311 ]
+    },
+    "properties": {
+    "school_name":"ADMIRALTY PRIMARY SCHOOL",
+    "postal_code":738907,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8329425,1.4331528 ]
+    },
+    "properties": {
+    "school_name":"AHMAD IBRAHIM PRIMARY SCHOOL",
+    "postal_code":768643,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8330204,1.3605835 ]
+    },
+    "properties": {
+    "school_name":"AI TONG SCHOOL",
+    "postal_code":579646,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.824424680531,1.29133439161334 ]
+    },
+    "properties": {
+    "school_name":"ALEXANDRA PRIMARY SCHOOL",
+    "postal_code":159016,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8871654,1.39037 ]
+    },
+    "properties": {
+    "school_name":"ANCHOR GREEN PRIMARY SCHOOL",
+    "postal_code":544969,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8413921,1.3842643 ]
+    },
+    "properties": {
+    "school_name":"ANDERSON PRIMARY SCHOOL",
+    "postal_code":569785,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8396309,1.3693218 ]
+    },
+    "properties": {
+    "school_name":"ANG MO KIO PRIMARY SCHOOL",
+    "postal_code":569920,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8409503,1.3093505 ]
+    },
+    "properties": {
+    "school_name":"ANGLO-CHINESE SCHOOL (JUNIOR)",
+    "postal_code":227988,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8356098,1.3183706 ]
+    },
+    "properties": {
+    "school_name":"ANGLO-CHINESE SCHOOL (PRIMARY)",
+    "postal_code":309918,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.938941,1.363606 ]
+    },
+    "properties": {
+    "school_name":"ANGSANA PRIMARY SCHOOL",
+    "postal_code":528565,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7736321,1.3839494 ]
+    },
+    "properties": {
+    "school_name":"BEACON PRIMARY SCHOOL",
+    "postal_code":679944,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.937879,1.323446 ]
+    },
+    "properties": {
+    "school_name":"BEDOK GREEN PRIMARY SCHOOL",
+    "postal_code":469317,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8654042,1.3218126 ]
+    },
+    "properties": {
+    "school_name":"BENDEMEER PRIMARY SCHOOL",
+    "postal_code":339948,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8086286,1.2761205 ]
+    },
+    "properties": {
+    "school_name":"BLANGAH RISE PRIMARY SCHOOL",
+    "postal_code":109100,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7132809,1.3431786 ]
+    },
+    "properties": {
+    "school_name":"BOON LAY GARDEN PRIMARY SCHOOL",
+    "postal_code":649930,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.769375,1.3736218 ]
+    },
+    "properties": {
+    "school_name":"BUKIT PANJANG PRIMARY SCHOOL",
+    "postal_code":679676,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.766828720721,1.3372995575169 ]
+    },
+    "properties": {
+    "school_name":"BUKIT TIMAH PRIMARY SCHOOL",
+    "postal_code":598112,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7536665,1.3458606 ]
+    },
+    "properties": {
+    "school_name":"BUKIT VIEW PRIMARY SCHOOL",
+    "postal_code":659634,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8158589,1.4512503 ]
+    },
+    "properties": {
+    "school_name":"CANBERRA PRIMARY SCHOOL",
+    "postal_code":757714,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.882228,1.3266443 ]
+    },
+    "properties": {
+    "school_name":"CANOSSA CATHOLIC PRIMARY SCHOOL",
+    "postal_code":387621,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8399627,1.2754726 ]
+    },
+    "properties": {
+    "school_name":"CANTONMENT PRIMARY SCHOOL",
+    "postal_code":88256,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.9570203,1.3724607 ]
+    },
+    "properties": {
+    "school_name":"CASUARINA PRIMARY SCHOOL",
+    "postal_code":518935,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8756211,1.3355886 ]
+    },
+    "properties": {
+    "school_name":"CEDAR PRIMARY SCHOOL",
+    "postal_code":349700,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.9520802,1.3402317 ]
+    },
+    "properties": {
+    "school_name":"CHANGKAT PRIMARY SCHOOL",
+    "postal_code":529896,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.9111057,1.3064854 ]
+    },
+    "properties": {
+    "school_name":"CHIJ (KATONG) PRIMARY",
+    "postal_code":424821,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8281576,1.2750228 ]
+    },
+    "properties": {
+    "school_name":"CHIJ (KELLOCK)",
+    "postal_code":99757,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8640094,1.3574296 ]
+    },
+    "properties": {
+    "school_name":"CHIJ OUR LADY OF GOOD COUNSEL",
+    "postal_code":558979,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8975758,1.373303 ]
+    },
+    "properties": {
+    "school_name":"CHIJ OUR LADY OF THE NATIVITY",
+    "postal_code":534793,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7674123,1.3666037 ]
+    },
+    "properties": {
+    "school_name":"CHIJ OUR LADY QUEEN OF PEACE",
+    "postal_code":679287,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8418473,1.3327527 ]
+    },
+    "properties": {
+    "school_name":"CHIJ PRIMARY (TOA PAYOH)",
+    "postal_code":319765,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8393092,1.4383957 ]
+    },
+    "properties": {
+    "school_name":"CHONGFU SCHOOL",
+    "postal_code":768959,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.9513996,1.3507074 ]
+    },
+    "properties": {
+    "school_name":"CHONGZHENG PRIMARY SCHOOL",
+    "postal_code":529392,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.741833,1.377759 ]
+    },
+    "properties": {
+    "school_name":"CHUA CHU KANG PRIMARY SCHOOL",
+    "postal_code":689905,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7631445,1.3150633 ]
+    },
+    "properties": {
+    "school_name":"CLEMENTI PRIMARY SCHOOL",
+    "postal_code":129903,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.897812229905,1.39444529636566 ]
+    },
+    "properties": {
+    "school_name":"COMPASSVALE PRIMARY SCHOOL",
+    "postal_code":545091,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.736225440727,1.38000806197242 ]
+    },
+    "properties": {
+    "school_name":"CONCORD PRIMARY SCHOOL",
+    "postal_code":689814,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.707593724342,1.35099779872539 ]
+    },
+    "properties": {
+    "school_name":"CORPORATION PRIMARY SCHOOL",
+    "postal_code":648347,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.9212702,1.3354611 ]
+    },
+    "properties": {
+    "school_name":"DAMAI PRIMARY SCHOOL",
+    "postal_code":479226,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7484722,1.3591798 ]
+    },
+    "properties": {
+    "school_name":"DAZHONG PRIMARY SCHOOL",
+    "postal_code":659441,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7432019,1.3947079 ]
+    },
+    "properties": {
+    "school_name":"DE LA SALLE SCHOOL",
+    "postal_code":689285,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.9616769,1.3526841 ]
+    },
+    "properties": {
+    "school_name":"EAST SPRING PRIMARY SCHOOL",
+    "postal_code":529258,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.9078476,1.4000914 ]
+    },
+    "properties": {
+    "school_name":"EDGEFIELD PRIMARY SCHOOL",
+    "postal_code":828869,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.9451282,1.3745127 ]
+    },
+    "properties": {
+    "school_name":"ELIAS PARK PRIMARY SCHOOL",
+    "postal_code":518866,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8174363,1.4540384 ]
+    },
+    "properties": {
+    "school_name":"ENDEAVOUR PRIMARY SCHOOL",
+    "postal_code":757521,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.794577787757,1.44415332824735 ]
+    },
+    "properties": {
+    "school_name":"EVERGREEN PRIMARY SCHOOL",
+    "postal_code":738908,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.785438270044,1.30054082453424 ]
+    },
+    "properties": {
+    "school_name":"FAIRFIELD METHODIST SCHOOL (PRIMARY)",
+    "postal_code":139648,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8507665,1.3123687 ]
+    },
+    "properties": {
+    "school_name":"FARRER PARK PRIMARY SCHOOL",
+    "postal_code":217567,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.9317103,1.329806 ]
+    },
+    "properties": {
+    "school_name":"FENGSHAN PRIMARY SCHOOL",
+    "postal_code":469680,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8803304,1.3972697 ]
+    },
+    "properties": {
+    "school_name":"FERN GREEN PRIMARY SCHOOL",
+    "postal_code":797538,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8744455,1.3903023 ]
+    },
+    "properties": {
+    "school_name":"FERNVALE PRIMARY SCHOOL",
+    "postal_code":797701,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.85553,1.340323 ]
+    },
+    "properties": {
+    "school_name":"FIRST TOA PAYOH PRIMARY SCHOOL",
+    "postal_code":319252,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.6997018,1.336413 ]
+    },
+    "properties": {
+    "school_name":"FRONTIER PRIMARY SCHOOL",
+    "postal_code":648200,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.778193,1.43048 ]
+    },
+    "properties": {
+    "school_name":"FUCHUN PRIMARY SCHOOL",
+    "postal_code":739063,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7361038,1.336504 ]
+    },
+    "properties": {
+    "school_name":"FUHUA PRIMARY SCHOOL",
+    "postal_code":609647,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8155475,1.2855952 ]
+    },
+    "properties": {
+    "school_name":"GAN ENG SENG PRIMARY SCHOOL",
+    "postal_code":158901,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8838458,1.3175913 ]
+    },
+    "properties": {
+    "school_name":"GEYLANG METHODIST SCHOOL (PRIMARY)",
+    "postal_code":389706,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.9491154,1.3572373 ]
+    },
+    "properties": {
+    "school_name":"GONGSHANG PRIMARY SCHOOL",
+    "postal_code":529176,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.9123347,1.396482 ]
+    },
+    "properties": {
+    "school_name":"GREENDALE PRIMARY SCHOOL",
+    "postal_code":828848,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7677945,1.3858893 ]
+    },
+    "properties": {
+    "school_name":"GREENRIDGE PRIMARY SCHOOL",
+    "postal_code":677744,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8047256,1.4398996 ]
+    },
+    "properties": {
+    "school_name":"GREENWOOD PRIMARY SCHOOL",
+    "postal_code":737942,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.9029026,1.3119435 ]
+    },
+    "properties": {
+    "school_name":"HAIG GIRLS' SCHOOL",
+    "postal_code":427072,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7842963,1.3166765 ]
+    },
+    "properties": {
+    "school_name":"HENRY PARK PRIMARY SCHOOL",
+    "postal_code":278790,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8941149,1.3669384 ]
+    },
+    "properties": {
+    "school_name":"HOLY INNOCENTS' PRIMARY SCHOOL",
+    "postal_code":536451,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8576285,1.32176 ]
+    },
+    "properties": {
+    "school_name":"HONG WEN SCHOOL",
+    "postal_code":327829,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.9134049,1.3995501 ]
+    },
+    "properties": {
+    "school_name":"HORIZON PRIMARY SCHOOL",
+    "postal_code":828819,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8808053,1.3773825 ]
+    },
+    "properties": {
+    "school_name":"HOUGANG PRIMARY SCHOOL",
+    "postal_code":534238,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8442403,1.4269729 ]
+    },
+    "properties": {
+    "school_name":"HUAMIN PRIMARY SCHOOL",
+    "postal_code":768857,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7906076,1.4289671 ]
+    },
+    "properties": {
+    "school_name":"INNOVA PRIMARY SCHOOL",
+    "postal_code":737888,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8304255,1.4276885 ]
+    },
+    "properties": {
+    "school_name":"JIEMIN PRIMARY SCHOOL",
+    "postal_code":768515,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8521323,1.372233 ]
+    },
+    "properties": {
+    "school_name":"JING SHAN PRIMARY SCHOOL",
+    "postal_code":569228,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.9392218,1.3478708 ]
+    },
+    "properties": {
+    "school_name":"JUNYUAN PRIMARY SCHOOL",
+    "postal_code":528906,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7331566,1.3484386 ]
+    },
+    "properties": {
+    "school_name":"JURONG PRIMARY SCHOOL",
+    "postal_code":609476,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.6988038,1.3391752 ]
+    },
+    "properties": {
+    "school_name":"JURONG WEST PRIMARY SCHOOL",
+    "postal_code":648368,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7564494,1.3455285 ]
+    },
+    "properties": {
+    "school_name":"KEMING PRIMARY SCHOOL",
+    "postal_code":659762,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8471486,1.3373382 ]
+    },
+    "properties": {
+    "school_name":"KHENG CHENG SCHOOL",
+    "postal_code":319580,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8883521,1.3109968 ]
+    },
+    "properties": {
+    "school_name":"KONG HWA SCHOOL",
+    "postal_code":399772,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7473628,1.3935606 ]
+    },
+    "properties": {
+    "school_name":"KRANJI PRIMARY SCHOOL",
+    "postal_code":689189,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8550183,1.3493982 ]
+    },
+    "properties": {
+    "school_name":"KUO CHUAN PRESBYTERIAN PRIMARY SCHOOL",
+    "postal_code":579793,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7180896,1.338204 ]
+    },
+    "properties": {
+    "school_name":"LAKESIDE PRIMARY SCHOOL",
+    "postal_code":618310,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7541659,1.354242 ]
+    },
+    "properties": {
+    "school_name":"LIANHUA PRIMARY SCHOOL",
+    "postal_code":659243,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.9012988,1.3284709 ]
+    },
+    "properties": {
+    "school_name":"MAHA BODHI SCHOOL",
+    "postal_code":408931,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7736431,1.4338391 ]
+    },
+    "properties": {
+    "school_name":"MARSILING PRIMARY SCHOOL",
+    "postal_code":738927,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.840021064426,1.34036676987375 ]
+    },
+    "properties": {
+    "school_name":"MARYMOUNT CONVENT SCHOOL",
+    "postal_code":297754,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.843252803742,1.37637683547682 ]
+    },
+    "properties": {
+    "school_name":"MAYFLOWER PRIMARY SCHOOL",
+    "postal_code":569878,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.9085895,1.3946185 ]
+    },
+    "properties": {
+    "school_name":"MEE TOH SCHOOL",
+    "postal_code":828867,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.934889078518,1.37552831658484 ]
+    },
+    "properties": {
+    "school_name":"MERIDIAN PRIMARY SCHOOL",
+    "postal_code":518798,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.783393009829,1.33294800935714 ]
+    },
+    "properties": {
+    "school_name":"METHODIST GIRLS' SCHOOL (PRIMARY)",
+    "postal_code":599986,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.889307782925,1.37382444075979 ]
+    },
+    "properties": {
+    "school_name":"MONTFORT JUNIOR SCHOOL",
+    "postal_code":538786,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.891180928186,1.39221149906592 ]
+    },
+    "properties": {
+    "school_name":"NAN CHIAU PRIMARY SCHOOL",
+    "postal_code":545080,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.761095065761,1.31920159956387 ]
+    },
+    "properties": {
+    "school_name":"NAN HUA PRIMARY SCHOOL",
+    "postal_code":128806,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.807750155296,1.32084749904532 ]
+    },
+    "properties": {
+    "school_name":"NANYANG PRIMARY SCHOOL",
+    "postal_code":268097,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.838794077233,1.41630663159387 ]
+    },
+    "properties": {
+    "school_name":"NAVAL BASE PRIMARY SCHOOL",
+    "postal_code":769028,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.80010216304,1.29964188181021 ]
+    },
+    "properties": {
+    "school_name":"NEW TOWN PRIMARY SCHOOL",
+    "postal_code":148812,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.917463017497,1.30552505910497 ]
+    },
+    "properties": {
+    "school_name":"NGEE ANN PRIMARY SCHOOL",
+    "postal_code":449149,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.903202683028,1.38706146494859 ]
+    },
+    "properties": {
+    "school_name":"NORTH SPRING PRIMARY SCHOOL",
+    "postal_code":545088,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.848190787869,1.42752327193727 ]
+    },
+    "properties": {
+    "school_name":"NORTH VIEW PRIMARY SCHOOL",
+    "postal_code":768960,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.895961877928,1.38282243016299 ]
+    },
+    "properties": {
+    "school_name":"NORTH VISTA PRIMARY SCHOOL",
+    "postal_code":544974,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8409285,1.4209699 ]
+    },
+    "properties": {
+    "school_name":"NORTHLAND PRIMARY SCHOOL",
+    "postal_code":769026,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.814197,1.4566079 ]
+    },
+    "properties": {
+    "school_name":"NORTHOAKS PRIMARY SCHOOL",
+    "postal_code":757622,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.904417,1.4181381 ]
+    },
+    "properties": {
+    "school_name":"NORTHSHORE PRIMARY SCHOOL",
+    "postal_code":828671,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.9111207,1.4046242 ]
+    },
+    "properties": {
+    "school_name":"OASIS PRIMARY SCHOOL",
+    "postal_code":828716,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.9237883,1.3193192 ]
+    },
+    "properties": {
+    "school_name":"OPERA ESTATE PRIMARY SCHOOL",
+    "postal_code":458436,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8913547,1.3837693 ]
+    },
+    "properties": {
+    "school_name":"PALM VIEW PRIMARY SCHOOL",
+    "postal_code":544822,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.9395417,1.3773807 ]
+    },
+    "properties": {
+    "school_name":"PARK VIEW PRIMARY SCHOOL",
+    "postal_code":519524,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.9628073,1.3724188 ]
+    },
+    "properties": {
+    "school_name":"PASIR RIS PRIMARY SCHOOL",
+    "postal_code":518968,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8849714,1.3494728 ]
+    },
+    "properties": {
+    "school_name":"PAYA LEBAR METHODIST GIRLS' SCHOOL (PRIMARY)",
+    "postal_code":536741,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8555856,1.3373736 ]
+    },
+    "properties": {
+    "school_name":"PEI CHUN PUBLIC SCHOOL",
+    "postal_code":319320,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7761065,1.3380564 ]
+    },
+    "properties": {
+    "school_name":"PEI HWA PRESBYTERIAN PRIMARY SCHOOL",
+    "postal_code":597610,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7675999,1.3161979 ]
+    },
+    "properties": {
+    "school_name":"PEI TONG PRIMARY SCHOOL",
+    "postal_code":129857,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8304171,1.4172334 ]
+    },
+    "properties": {
+    "school_name":"PEIYING PRIMARY SCHOOL",
+    "postal_code":768687,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.732791,1.354426 ]
+    },
+    "properties": {
+    "school_name":"PIONEER PRIMARY SCHOOL",
+    "postal_code":699915,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.9352465,1.3576513 ]
+    },
+    "properties": {
+    "school_name":"POI CHING SCHOOL",
+    "postal_code":529067,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7410197,1.3492036 ]
+    },
+    "properties": {
+    "school_name":"PRINCESS ELIZABETH PRIMARY SCHOOL",
+    "postal_code":659163,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.898804,1.4115993 ]
+    },
+    "properties": {
+    "school_name":"PUNGGOL COVE PRIMARY SCHOOL",
+    "postal_code":828674,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8988014,1.4018723 ]
+    },
+    "properties": {
+    "school_name":"PUNGGOL GREEN PRIMARY SCHOOL",
+    "postal_code":828772,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.894507,1.3777946 ]
+    },
+    "properties": {
+    "school_name":"PUNGGOL PRIMARY SCHOOL",
+    "postal_code":538787,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.9051564,1.4051459 ]
+    },
+    "properties": {
+    "school_name":"PUNGGOL VIEW PRIMARY SCHOOL",
+    "postal_code":828845,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7567433,1.3132512 ]
+    },
+    "properties": {
+    "school_name":"QIFA PRIMARY SCHOOL",
+    "postal_code":128104,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7883398,1.442036 ]
+    },
+    "properties": {
+    "school_name":"QIHUA PRIMARY SCHOOL",
+    "postal_code":738525,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.807548617332,1.29559365009015 ]
+    },
+    "properties": {
+    "school_name":"QUEENSTOWN PRIMARY SCHOOL",
+    "postal_code":149303,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.824188270373,1.27495823622634 ]
+    },
+    "properties": {
+    "school_name":"RADIN MAS PRIMARY SCHOOL",
+    "postal_code":99840,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.806442915912,1.3294042600012 ]
+    },
+    "properties": {
+    "school_name":"RAFFLES GIRLS' PRIMARY SCHOOL",
+    "postal_code":289072,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.9343324,1.333243 ]
+    },
+    "properties": {
+    "school_name":"RED SWASTIKA SCHOOL",
+    "postal_code":469719,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.835815165829,1.2942232846169 ]
+    },
+    "properties": {
+    "school_name":"RIVER VALLEY PRIMARY SCHOOL",
+    "postal_code":237993,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.801832,1.4470474 ]
+    },
+    "properties": {
+    "school_name":"RIVERSIDE PRIMARY SCHOOL",
+    "postal_code":737803,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.9045596,1.39341 ]
+    },
+    "properties": {
+    "school_name":"RIVERVALE PRIMARY SCHOOL",
+    "postal_code":545092,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8750016,1.3728907 ]
+    },
+    "properties": {
+    "school_name":"ROSYTH SCHOOL",
+    "postal_code":555855,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.718458,1.3467387 ]
+    },
+    "properties": {
+    "school_name":"RULANG PRIMARY SCHOOL",
+    "postal_code":649295,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8210424,1.4450738 ]
+    },
+    "properties": {
+    "school_name":"SEMBAWANG PRIMARY SCHOOL",
+    "postal_code":757715,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8997672,1.3894975 ]
+    },
+    "properties": {
+    "school_name":"SENG KANG PRIMARY SCHOOL",
+    "postal_code":545166,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8752177,1.3928461 ]
+    },
+    "properties": {
+    "school_name":"SENGKANG GREEN PRIMARY SCHOOL",
+    "postal_code":797636,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7215238,1.3476532 ]
+    },
+    "properties": {
+    "school_name":"SHUQUN PRIMARY SCHOOL",
+    "postal_code":649332,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7860351,1.4324094 ]
+    },
+    "properties": {
+    "school_name":"SI LING PRIMARY SCHOOL",
+    "postal_code":739067,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8277448,1.3208073 ]
+    },
+    "properties": {
+    "school_name":"SINGAPORE CHINESE GIRLS' PRIMARY SCHOOL",
+    "postal_code":309437,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7462759,1.3816667 ]
+    },
+    "properties": {
+    "school_name":"SOUTH VIEW PRIMARY SCHOOL",
+    "postal_code":689762,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8899263,1.3946702 ]
+    },
+    "properties": {
+    "school_name":"SPRINGDALE PRIMARY SCHOOL",
+    "postal_code":544799,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8651172,1.3314026 ]
+    },
+    "properties": {
+    "school_name":"ST. ANDREW'S JUNIOR SCHOOL",
+    "postal_code":359337,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.9412349,1.3347254 ]
+    },
+    "properties": {
+    "school_name":"ST. ANTHONY'S CANOSSIAN PRIMARY SCHOOL",
+    "postal_code":469701,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.749252,1.3641195 ]
+    },
+    "properties": {
+    "school_name":"ST. ANTHONY'S PRIMARY SCHOOL",
+    "postal_code":659401,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8625611,1.349472 ]
+    },
+    "properties": {
+    "school_name":"ST. GABRIEL'S PRIMARY SCHOOL",
+    "postal_code":556742,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.9370072,1.3493857 ]
+    },
+    "properties": {
+    "school_name":"ST. HILDA'S PRIMARY SCHOOL",
+    "postal_code":529706,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.845612,1.3177287 ]
+    },
+    "properties": {
+    "school_name":"ST. JOSEPH'S INSTITUTION JUNIOR",
+    "postal_code":309331,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.845955315605,1.30390355715254 ]
+    },
+    "properties": {
+    "school_name":"ST. MARGARET'S SCHOOL (PRIMARY)",
+    "postal_code":228197,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.9172582,1.31879 ]
+    },
+    "properties": {
+    "school_name":"ST. STEPHEN'S SCHOOL",
+    "postal_code":455789,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.9487258,1.3604765 ]
+    },
+    "properties": {
+    "school_name":"TAMPINES NORTH PRIMARY SCHOOL",
+    "postal_code":529565,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.9440047,1.3497788 ]
+    },
+    "properties": {
+    "school_name":"TAMPINES PRIMARY SCHOOL",
+    "postal_code":529426,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.9001627,1.3052579 ]
+    },
+    "properties": {
+    "school_name":"TANJONG KATONG PRIMARY SCHOOL",
+    "postal_code":437259,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.9115532,1.3052853 ]
+    },
+    "properties": {
+    "school_name":"TAO NAN SCHOOL",
+    "postal_code":449761,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8509572,1.3655879 ]
+    },
+    "properties": {
+    "school_name":"TECK GHEE PRIMARY SCHOOL",
+    "postal_code":569299,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7532919,1.38365 ]
+    },
+    "properties": {
+    "school_name":"TECK WHYE PRIMARY SCHOOL",
+    "postal_code":688261,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.9109341,1.3310459 ]
+    },
+    "properties": {
+    "school_name":"TELOK KURAU PRIMARY SCHOOL",
+    "postal_code":479239,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.9455907,1.3177068 ]
+    },
+    "properties": {
+    "school_name":"TEMASEK PRIMARY SCHOOL",
+    "postal_code":469300,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8538261,1.3600327 ]
+    },
+    "properties": {
+    "school_name":"TOWNSVILLE PRIMARY SCHOOL",
+    "postal_code":569730,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7468227,1.4028549 ]
+    },
+    "properties": {
+    "school_name":"UNITY PRIMARY SCHOOL",
+    "postal_code":688268,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8990782,1.4068358 ]
+    },
+    "properties": {
+    "school_name":"VALOUR PRIMARY SCHOOL",
+    "postal_code":828728,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.9186216,1.3988281 ]
+    },
+    "properties": {
+    "school_name":"WATERWAY PRIMARY SCHOOL",
+    "postal_code":828802,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8223038,1.4519202 ]
+    },
+    "properties": {
+    "school_name":"WELLINGTON PRIMARY SCHOOL",
+    "postal_code":757702,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.6992864,1.3448791 ]
+    },
+    "properties": {
+    "school_name":"WEST GROVE PRIMARY SCHOOL",
+    "postal_code":649223,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7661958,1.3894415 ]
+    },
+    "properties": {
+    "school_name":"WEST SPRING PRIMARY SCHOOL",
+    "postal_code":679946,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7602405,1.3836759 ]
+    },
+    "properties": {
+    "school_name":"WEST VIEW PRIMARY SCHOOL",
+    "postal_code":677742,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7005343,1.3471846 ]
+    },
+    "properties": {
+    "school_name":"WESTWOOD PRIMARY SCHOOL",
+    "postal_code":649188,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.9609189,1.3655572 ]
+    },
+    "properties": {
+    "school_name":"WHITE SANDS PRIMARY SCHOOL",
+    "postal_code":519075,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7906045,1.4331035 ]
+    },
+    "properties": {
+    "school_name":"WOODGROVE PRIMARY SCHOOL",
+    "postal_code":738079,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7915706,1.4365511 ]
+    },
+    "properties": {
+    "school_name":"WOODLANDS PRIMARY SCHOOL",
+    "postal_code":738853,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7974358,1.4349523 ]
+    },
+    "properties": {
+    "school_name":"WOODLANDS RING PRIMARY SCHOOL",
+    "postal_code":738240,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8904729,1.357909 ]
+    },
+    "properties": {
+    "school_name":"XINGHUA PRIMARY SCHOOL",
+    "postal_code":538882,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.6879503,1.3425475 ]
+    },
+    "properties": {
+    "school_name":"XINGNAN PRIMARY SCHOOL",
+    "postal_code":649036,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8830808,1.3713955 ]
+    },
+    "properties": {
+    "school_name":"XINMIN PRIMARY SCHOOL",
+    "postal_code":538784,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8377554,1.4334719 ]
+    },
+    "properties": {
+    "school_name":"XISHAN PRIMARY SCHOOL",
+    "postal_code":768611,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8685956,1.3486458 ]
+    },
+    "properties": {
+    "school_name":"YANGZHENG PRIMARY SCHOOL",
+    "postal_code":556108,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.750986,1.3967661 ]
+    },
+    "properties": {
+    "school_name":"YEW TEE PRIMARY SCHOOL",
+    "postal_code":689100,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8856437,1.3779327 ]
+    },
+    "properties": {
+    "school_name":"YIO CHU KANG PRIMARY SCHOOL",
+    "postal_code":538720,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8340872,1.4333861 ]
+    },
+    "properties": {
+    "school_name":"YISHUN PRIMARY SCHOOL",
+    "postal_code":768679,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.932144857355,1.33388930344069 ]
+    },
+    "properties": {
+    "school_name":"YU NENG PRIMARY SCHOOL",
+    "postal_code":469623,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.741105772644,1.34280230475033 ]
+    },
+    "properties": {
+    "school_name":"YUHUA PRIMARY SCHOOL",
+    "postal_code":609558,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.950461927088,1.35129177656981 ]
+    },
+    "properties": {
+    "school_name":"YUMIN PRIMARY SCHOOL",
+    "postal_code":529393,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.825951875662,1.28421153335379 ]
+    },
+    "properties": {
+    "school_name":"ZHANGDE PRIMARY SCHOOL",
+    "postal_code":169485,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.769313521752,1.37954887512229 ]
+    },
+    "properties": {
+    "school_name":"ZHENGHUA PRIMARY SCHOOL",
+    "postal_code":679002,
+    "mainlevel_code":"PRIMARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.869762438084,1.36020329705047 ]
+    },
+    "properties": {
+    "school_name":"ZHONGHUA PRIMARY SCHOOL",
+    "postal_code":556095,
+    "mainlevel_code":"PRIMARY"
+    }
+  }
+]
+}

@@ -200,3 +200,46 @@ export const maxAreaOptions = [
   { value: "9000", label: "9,000" },
   { value: "10000", label: "10,000" },
 ]
+
+// Date range filter options for transactions page
+export const dateRangePresets = [
+  { value: "all", label: "All Time" },
+  { value: "1month", label: "Past 1 Month" },
+  { value: "3months", label: "Past 3 Months" },
+  { value: "6months", label: "Past 6 Months" },
+  { value: "12months", label: "Past 12 Months" },
+  { value: "18months", label: "Past 18 Months" },
+]
+
+// Helper function to get date range from preset
+export const getDateRangeFromPreset = (preset: string) => {
+  const now = new Date()
+  const startDate = new Date()
+  
+  switch (preset) {
+    case "1month":
+      startDate.setMonth(now.getMonth() - 1)
+      break
+    case "3months":
+      startDate.setMonth(now.getMonth() - 3)
+      break
+    case "6months":
+      startDate.setMonth(now.getMonth() - 6)
+      break
+    case "12months":
+      startDate.setMonth(now.getMonth() - 12)
+      break
+    case "18months":
+      startDate.setMonth(now.getMonth() - 18)
+      break
+    case "all":
+    default:
+      startDate.setFullYear(1960) // Very old date to show all
+      break
+  }
+  
+  return {
+    startDate: startDate.toISOString().split('T')[0],
+    endDate: now.toISOString().split('T')[0]
+  }
+}

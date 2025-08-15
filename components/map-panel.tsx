@@ -5,8 +5,8 @@ import dynamic from "next/dynamic"
 import { Layers, School, Train } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
-// Dynamically import the SimpleMap component to avoid SSR issues
-const SimpleMap = dynamic(() => import("./simple-map").then(mod => ({ default: mod.SimpleMap })), { 
+// Dynamically import the GoogleMap component to avoid SSR issues
+const GoogleMap = dynamic(() => import("./google-map").then(mod => ({ default: mod.GoogleMap })), { 
   ssr: false,
   loading: () => <div className="w-full h-full bg-gray-100 flex items-center justify-center">Loading map...</div>
 })
@@ -30,8 +30,8 @@ export function MapPanel({ onPropertyClick, transactionType = "For Sale" }: MapP
 
   return (
     <div className="h-full relative bg-brand-background-light">
-      {/* Simple Map with Red Dot Markers */}
-      <SimpleMap onMarkerClick={handleMarkerClick} activeLayer={activeLayer} transactionType={transactionType} />
+      {/* Google Map with Red Dot Markers */}
+      <GoogleMap onMarkerClick={handleMarkerClick} activeLayer={activeLayer} transactionType={transactionType} />
       
       {/* Advanced Map Controls */}
       <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-lg shadow-lg p-3 z-[10]">

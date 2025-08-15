@@ -46,7 +46,7 @@ export const mockCollectionsData = [
 export const mockSavedSearches = [
   {
     id: 1,
-    name: "Peiyee 1-3 Bedrooms Search",
+    name: "Saved Search (1)",
     priceRange: "$0 - $10,000,000",
     bedrooms: "1, 2, 3 bedrooms",
     tenure: "Any tenure",
@@ -54,6 +54,7 @@ export const mockSavedSearches = [
     location: "D1 - Marina Bay, D4 - Keppel Bay",
     savedDate: "23 Jul 2024",
     notification: "Daily",
+    folderId: "My Saved Searches"
   },
   {
     id: 2,
@@ -65,10 +66,11 @@ export const mockSavedSearches = [
     location: "D1 - Marina Bay, D2 - Tanjong Pagar",
     savedDate: "20 Jul 2024",
     notification: "Weekly",
+    folderId: "My Saved Searches"
   },
   {
     id: 3,
-    name: "Landed Properties",
+    name: "Saved Search (2)",
     priceRange: "$5,000,000 - $15,000,000",
     bedrooms: "3, 4, 5 bedrooms",
     tenure: "Freehold tenure",
@@ -76,13 +78,26 @@ export const mockSavedSearches = [
     location: "D10 - Bukit Timah, D11 - Newton",
     savedDate: "18 Jul 2024",
     notification: "Instant",
+    folderId: "My Saved Searches"
+  },
+  {
+    id: 4,
+    name: "Saved Search (1)",
+    priceRange: "$800,000 - $1,500,000",
+    bedrooms: "2, 3 bedrooms",
+    tenure: "99-year tenure",
+    propertyType: "HDB",
+    location: "D15 - Katong, D16 - Bedok",
+    savedDate: "15 Jul 2024",
+    notification: "Weekly",
+    folderId: "Family Homes"
   },
 ]
 
 export const mockFolders = [
   { name: "My Saved Searches", count: 3 },
   { name: "Downtown Projects", count: 0 },
-  { name: "Family Homes", count: 0 },
+  { name: "Family Homes", count: 1 },
   { name: "Investment Properties", count: 0 },
 ]
 

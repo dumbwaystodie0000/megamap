@@ -10,16 +10,15 @@ import { BuildingDetailsPanel } from "@/components/building-details-panel"
 import { PropertyDetailsPanel } from "@/components/property-details-panel"
 import { SaveToCollectionDialog } from "@/components/save-to-collection-dialog"
 import { generateBuildingDetailsData } from "@/lib/unit-mock-up"
+import { getProjectById } from "@/lib/project-data"
 
 type ViewMode = "building" | "grid" | "table"
 type PanelType = "none" | "building-details" | "property-details"
 
 function PropertyPortalContent() {
   const searchParams = useSearchParams()
+  // Get the transactionType from URL parameters or use "For Sale" as default
   const transactionType = searchParams.get("transactionType") || "For Sale"
-  
-  // Debug: Log the transaction type
-  console.log('App - TransactionType:', transactionType)
   
   const [viewMode, setViewMode] = useState<ViewMode>("building")
   const [isBladeCollapsed, setIsBladeCollapsed] = useState(false)
@@ -40,14 +39,18 @@ function PropertyPortalContent() {
   const getBladeWidth = () => {
     if (isBladeCollapsed) return "w-20"
     if (!showMap) return "w-full" // When map is off, take full width
+    
+    // Responsive width logic based on view mode and screen size
     switch (viewMode) {
       case "building":
       case "grid":
-        return "w-1/4"
+        // Use responsive classes: smaller on mobile, larger on desktop
+        return "min-w-[320px] w-full sm:w-80 md:w-96 lg:w-[28rem] xl:w-[32rem] 2xl:w-[36rem]"
       case "table":
-        return "w-1/2"
+        // Table view needs more space for columns
+        return "min-w-[400px] w-full sm:w-96 md:w-[28rem] lg:w-[32rem] xl:w-[36rem] 2xl:w-[40rem]"
       default:
-        return "w-1/4"
+        return "min-w-[320px] w-full sm:w-80 md:w-96 lg:w-[28rem] xl:w-[32rem] 2xl:w-[36rem]"
     }
   }
 
@@ -63,27 +66,17 @@ function PropertyPortalContent() {
 
   const handlePropertyDetailsClick = (propertyData: any) => {
     // Use the actual property data passed from the results blade or map
-    setSelectedProperty({
-      id: propertyData.id,
-      price: propertyData.price,
-      title: propertyData.title || propertyData.name,
-      address: propertyData.address,
-      beds: propertyData.beds,
-      baths: propertyData.baths,
-      size: propertyData.size,
-      type: propertyData.type,
-      tenure: propertyData.tenure,
-      year: propertyData.year,
-      status: propertyData.status || "ACTIVE",
-      agency: propertyData.agency,
-      description: propertyData.description,
-      features: propertyData.features || [],
-      images: propertyData.images || ["/placeholder.svg"],
-      agent: propertyData.agent,
-      floorPlan: propertyData.floorPlan,
-      virtualTour: propertyData.virtualTour,
-      additionalDetails: propertyData.additionalDetails,
-    })
+    const projectData = getProjectById(propertyData.projectId);
+    
+    const mergedPropertyData = {
+      ...propertyData,
+      type: projectData?.type || "N/A",
+      tenure: projectData?.tenure || "N/A",
+      year: projectData?.year || "N/A",
+      district: projectData?.district || "N/A",
+    };
+    
+    setSelectedProperty(mergedPropertyData);
     setActivePanel("property-details")
   }
 
@@ -127,7 +120,7 @@ function PropertyPortalContent() {
       <div className={`flex h-[calc(100vh-153px)] ${!showMap ? 'max-w-7xl mx-auto' : ''}`}>
         {" "}
         {/* Adjusted height for sticky elements */}
-        <div className={`${getBladeWidth()} transition-all duration-300 ease-in-out ${showMap ? 'border-r border-gray-200' : ''}`}>
+        <div className={`${getBladeWidth()} flex-shrink-0 transition-all duration-300 ease-in-out ${showMap ? 'border-r border-gray-200' : ''}`}>
           {activePanel === "building-details" && selectedBuilding ? (
             <BuildingDetailsPanel
               buildingData={selectedBuilding}

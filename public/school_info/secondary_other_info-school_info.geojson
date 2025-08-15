@@ -1,0 +1,1901 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.741593577684,1.35031939200985 ]
+    },
+    "properties": {
+    "school_name":"MILLENNIA INSTITUTE",
+    "postal_code":658965,
+    "mainlevel_code":"CENTRALISED INSTITUTE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.845886,1.3783968 ]
+    },
+    "properties": {
+    "school_name":"ANDERSON SERANGOON JUNIOR COLLEGE",
+    "postal_code":534768,
+    "mainlevel_code":"JUNIOR COLLEGE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7853585,1.3030426 ]
+    },
+    "properties": {
+    "school_name":"ANGLO-CHINESE JUNIOR COLLEGE",
+    "postal_code":139745,
+    "mainlevel_code":"JUNIOR COLLEGE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8350289,1.3245561 ]
+    },
+    "properties": {
+    "school_name":"CATHOLIC JUNIOR COLLEGE",
+    "postal_code":297822,
+    "mainlevel_code":"JUNIOR COLLEGE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.841286169122,1.36213757183547 ]
+    },
+    "properties": {
+    "school_name":"EUNOIA JUNIOR COLLEGE",
+    "postal_code":573838,
+    "mainlevel_code":"JUNIOR COLLEGE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7543747,1.3843741 ]
+    },
+    "properties": {
+    "school_name":"JURONG PIONEER JUNIOR COLLEGE",
+    "postal_code":688258,
+    "mainlevel_code":"JUNIOR COLLEGE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.866498721912,1.35028314949236 ]
+    },
+    "properties": {
+    "school_name":"NANYANG JUNIOR COLLEGE",
+    "postal_code":556111,
+    "mainlevel_code":"JUNIOR COLLEGE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8635764,1.3330652 ]
+    },
+    "properties": {
+    "school_name":"ST. ANDREW'S JUNIOR COLLEGE",
+    "postal_code":357691,
+    "mainlevel_code":"JUNIOR COLLEGE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.9369908,1.3763335 ]
+    },
+    "properties": {
+    "school_name":"TAMPINES MERIDIAN JUNIOR COLLEGE",
+    "postal_code":518799,
+    "mainlevel_code":"JUNIOR COLLEGE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.9199828,1.3067018 ]
+    },
+    "properties": {
+    "school_name":"VICTORIA JUNIOR COLLEGE",
+    "postal_code":449035,
+    "mainlevel_code":"JUNIOR COLLEGE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8300318,1.424267 ]
+    },
+    "properties": {
+    "school_name":"YISHUN INNOVA JUNIOR COLLEGE",
+    "postal_code":768675,
+    "mainlevel_code":"JUNIOR COLLEGE"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7803635,1.3037041 ]
+    },
+    "properties": {
+    "school_name":"ANGLO-CHINESE SCHOOL (INDEPENDENT)",
+    "postal_code":139650,
+    "mainlevel_code":"MIXED LEVELS"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8448747,1.3547231 ]
+    },
+    "properties": {
+    "school_name":"CATHOLIC HIGH SCHOOL",
+    "postal_code":579767,
+    "mainlevel_code":"MIXED LEVELS"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8342533,1.3734769 ]
+    },
+    "properties": {
+    "school_name":"CHIJ ST. NICHOLAS GIRLS' SCHOOL",
+    "postal_code":569405,
+    "mainlevel_code":"MIXED LEVELS"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8829416,1.2999622 ]
+    },
+    "properties": {
+    "school_name":"DUNMAN HIGH SCHOOL",
+    "postal_code":436895,
+    "mainlevel_code":"MIXED LEVELS"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.805704361472,1.3249477928719 ]
+    },
+    "properties": {
+    "school_name":"HWA CHONG INSTITUTION",
+    "postal_code":269734,
+    "mainlevel_code":"MIXED LEVELS"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8778239,1.3413884 ]
+    },
+    "properties": {
+    "school_name":"MARIS STELLA HIGH SCHOOL",
+    "postal_code":368051,
+    "mainlevel_code":"MIXED LEVELS"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.804110905425,1.33029291072172 ]
+    },
+    "properties": {
+    "school_name":"NATIONAL JUNIOR COLLEGE",
+    "postal_code":288913,
+    "mainlevel_code":"MIXED LEVELS"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.770152807737,1.30600678096247 ]
+    },
+    "properties": {
+    "school_name":"NUS HIGH SCHOOL OF MATHEMATICS AND SCIENCE",
+    "postal_code":129957,
+    "mainlevel_code":"MIXED LEVELS"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8458752,1.3461878 ]
+    },
+    "properties": {
+    "school_name":"RAFFLES INSTITUTION",
+    "postal_code":575954,
+    "mainlevel_code":"MIXED LEVELS"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7090222,1.3440781 ]
+    },
+    "properties": {
+    "school_name":"RIVER VALLEY HIGH SCHOOL",
+    "postal_code":649961,
+    "mainlevel_code":"MIXED LEVELS"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8486875,1.2993649 ]
+    },
+    "properties": {
+    "school_name":"SCHOOL OF THE ARTS, SINGAPORE",
+    "postal_code":227968,
+    "mainlevel_code":"MIXED LEVELS"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7894448,1.4264115 ]
+    },
+    "properties": {
+    "school_name":"SINGAPORE SPORTS SCHOOL",
+    "postal_code":737913,
+    "mainlevel_code":"MIXED LEVELS"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.828499,1.3236532 ]
+    },
+    "properties": {
+    "school_name":"ST. JOSEPH'S INSTITUTION",
+    "postal_code":308274,
+    "mainlevel_code":"MIXED LEVELS"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.956186,1.3572802 ]
+    },
+    "properties": {
+    "school_name":"TEMASEK JUNIOR COLLEGE",
+    "postal_code":529564,
+    "mainlevel_code":"MIXED LEVELS"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.802398196596,1.44589068910993 ]
+    },
+    "properties": {
+    "school_name":"ADMIRALTY SECONDARY SCHOOL",
+    "postal_code":737916,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8297187,1.4360598 ]
+    },
+    "properties": {
+    "school_name":"AHMAD IBRAHIM SECONDARY SCHOOL",
+    "postal_code":768928,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8515542,1.3743401 ]
+    },
+    "properties": {
+    "school_name":"ANDERSON SECONDARY SCHOOL",
+    "postal_code":569206,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.842155,1.3673372 ]
+    },
+    "properties": {
+    "school_name":"ANG MO KIO SECONDARY SCHOOL",
+    "postal_code":569362,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.9418535,1.3311811 ]
+    },
+    "properties": {
+    "school_name":"ANGLICAN HIGH SCHOOL",
+    "postal_code":487012,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8357727,1.3196165 ]
+    },
+    "properties": {
+    "school_name":"ANGLO-CHINESE SCHOOL (BARKER ROAD)",
+    "postal_code":309919,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7666876,1.3683817 ]
+    },
+    "properties": {
+    "school_name":"ASSUMPTION ENGLISH SCHOOL",
+    "postal_code":678117,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7659592,1.3696708 ]
+    },
+    "properties": {
+    "school_name":"ASSUMPTION PATHWAY SCHOOL",
+    "postal_code":679697,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8828063,1.3399542 ]
+    },
+    "properties": {
+    "school_name":"BARTLEY SECONDARY SCHOOL",
+    "postal_code":538403,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8522809,1.3417903 ]
+    },
+    "properties": {
+    "school_name":"BEATTY SECONDARY SCHOOL",
+    "postal_code":318990,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.9350284,1.3345195 ]
+    },
+    "properties": {
+    "school_name":"BEDOK GREEN SECONDARY SCHOOL",
+    "postal_code":469722,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.9509892,1.3251366 ]
+    },
+    "properties": {
+    "school_name":"BEDOK SOUTH SECONDARY SCHOOL",
+    "postal_code":468585,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.9437763,1.3241571 ]
+    },
+    "properties": {
+    "school_name":"BEDOK VIEW SECONDARY SCHOOL",
+    "postal_code":469293,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8609703,1.3246112 ]
+    },
+    "properties": {
+    "school_name":"BENDEMEER SECONDARY SCHOOL",
+    "postal_code":327919,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7018915,1.3427222 ]
+    },
+    "properties": {
+    "school_name":"BOON LAY SECONDARY SCHOOL",
+    "postal_code":648354,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8776596,1.37036 ]
+    },
+    "properties": {
+    "school_name":"BOWEN SECONDARY SCHOOL",
+    "postal_code":547529,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.886918,1.3070507 ]
+    },
+    "properties": {
+    "school_name":"BROADRICK SECONDARY SCHOOL",
+    "postal_code":399935,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7408738,1.3484912 ]
+    },
+    "properties": {
+    "school_name":"BUKIT BATOK SECONDARY SCHOOL",
+    "postal_code":658962,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.813438929393,1.28569283064288 ]
+    },
+    "properties": {
+    "school_name":"BUKIT MERAH SECONDARY SCHOOL",
+    "postal_code":159050,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7383613,1.3822425 ]
+    },
+    "properties": {
+    "school_name":"BUKIT PANJANG GOVT. HIGH SCHOOL",
+    "postal_code":689809,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7522266,1.3457331 ]
+    },
+    "properties": {
+    "school_name":"BUKIT VIEW SECONDARY SCHOOL",
+    "postal_code":659633,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8142036,1.4531909 ]
+    },
+    "properties": {
+    "school_name":"CANBERRA SECONDARY SCHOOL",
+    "postal_code":757699,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8739331,1.3337581 ]
+    },
+    "properties": {
+    "school_name":"CEDAR GIRLS' SECONDARY SCHOOL",
+    "postal_code":349692,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.9532456,1.3395064 ]
+    },
+    "properties": {
+    "school_name":"CHANGKAT CHANGI SECONDARY SCHOOL",
+    "postal_code":529894,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.9171444,1.3064427 ]
+    },
+    "properties": {
+    "school_name":"CHIJ KATONG CONVENT",
+    "postal_code":449150,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8432717,1.3324608 ]
+    },
+    "properties": {
+    "school_name":"CHIJ SECONDARY (TOA PAYOH)",
+    "postal_code":319764,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.902465,1.3917523 ]
+    },
+    "properties": {
+    "school_name":"CHIJ ST. JOSEPH'S CONVENT",
+    "postal_code":548595,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8224408,1.2753518 ]
+    },
+    "properties": {
+    "school_name":"CHIJ ST. THERESA'S CONVENT",
+    "postal_code":99138,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7934512,1.4265679 ]
+    },
+    "properties": {
+    "school_name":"CHRIST CHURCH SECONDARY SCHOOL",
+    "postal_code":737924,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7551033,1.3833343 ]
+    },
+    "properties": {
+    "school_name":"CHUA CHU KANG SECONDARY SCHOOL",
+    "postal_code":688848,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8916533,1.3050916 ]
+    },
+    "properties": {
+    "school_name":"CHUNG CHENG HIGH SCHOOL (MAIN)",
+    "postal_code":439012,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8373908,1.4192261 ]
+    },
+    "properties": {
+    "school_name":"CHUNG CHENG HIGH SCHOOL (YISHUN)",
+    "postal_code":768547,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7620206,1.3155392 ]
+    },
+    "properties": {
+    "school_name":"CLEMENTI TOWN SECONDARY SCHOOL",
+    "postal_code":129904,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7456374,1.319204 ]
+    },
+    "properties": {
+    "school_name":"COMMONWEALTH SECONDARY SCHOOL",
+    "postal_code":608784,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.899847164494,1.39614083952009 ]
+    },
+    "properties": {
+    "school_name":"COMPASSVALE SECONDARY SCHOOL",
+    "postal_code":545083,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.817544461755,1.29331947077104 ]
+    },
+    "properties": {
+    "school_name":"CRESCENT GIRLS' SCHOOL",
+    "postal_code":247961,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7426282,1.3431199 ]
+    },
+    "properties": {
+    "school_name":"CREST SECONDARY SCHOOL",
+    "postal_code":609561,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.9270917,1.336928 ]
+    },
+    "properties": {
+    "school_name":"DAMAI SECONDARY SCHOOL",
+    "postal_code":479229,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8525458,1.3659971 ]
+    },
+    "properties": {
+    "school_name":"DEYI SECONDARY SCHOOL",
+    "postal_code":569277,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7447211,1.3635791 ]
+    },
+    "properties": {
+    "school_name":"DUNEARN SECONDARY SCHOOL",
+    "postal_code":659204,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.956214,1.3606526 ]
+    },
+    "properties": {
+    "school_name":"DUNMAN SECONDARY SCHOOL",
+    "postal_code":529093,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.9606408,1.3562251 ]
+    },
+    "properties": {
+    "school_name":"EAST SPRING SECONDARY SCHOOL",
+    "postal_code":529231,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.902687385465,1.40059309981824 ]
+    },
+    "properties": {
+    "school_name":"EDGEFIELD SECONDARY SCHOOL",
+    "postal_code":828814,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.794137756171,1.44149131273737 ]
+    },
+    "properties": {
+    "school_name":"EVERGREEN SECONDARY SCHOOL",
+    "postal_code":738489,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.784099647149,1.30163374395823 ]
+    },
+    "properties": {
+    "school_name":"FAIRFIELD METHODIST SCHOOL (SECONDARY)",
+    "postal_code":139649,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7265209,1.3470141 ]
+    },
+    "properties": {
+    "school_name":"FUHUA SECONDARY SCHOOL",
+    "postal_code":649410,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8237337,1.2890712 ]
+    },
+    "properties": {
+    "school_name":"GAN ENG SENG SCHOOL",
+    "postal_code":159561,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8826612,1.3176491 ]
+    },
+    "properties": {
+    "school_name":"GEYLANG METHODIST SCHOOL (SECONDARY)",
+    "postal_code":389705,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.9117002,1.3969602 ]
+    },
+    "properties": {
+    "school_name":"GREENDALE SECONDARY SCHOOL",
+    "postal_code":828866,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.763999,1.3756001 ]
+    },
+    "properties": {
+    "school_name":"GREENRIDGE SECONDARY SCHOOL",
+    "postal_code":678972,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.850209,1.3444086 ]
+    },
+    "properties": {
+    "school_name":"GUANGYANG SECONDARY SCHOOL",
+    "postal_code":579807,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.9545446,1.3743372 ]
+    },
+    "properties": {
+    "school_name":"HAI SING CATHOLIC SCHOOL",
+    "postal_code":519421,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7529865,1.3527358 ]
+    },
+    "properties": {
+    "school_name":"HILLGROVE SECONDARY SCHOOL",
+    "postal_code":659250,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8963989,1.3715451 ]
+    },
+    "properties": {
+    "school_name":"HOLY INNOCENTS' HIGH SCHOOL",
+    "postal_code":534786,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.882534,1.3776402 ]
+    },
+    "properties": {
+    "school_name":"HOUGANG SECONDARY SCHOOL",
+    "postal_code":534256,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7218324,1.3523437 ]
+    },
+    "properties": {
+    "school_name":"HUA YI SECONDARY SCHOOL",
+    "postal_code":649371,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.9338862,1.3536132 ]
+    },
+    "properties": {
+    "school_name":"JUNYUAN SECONDARY SCHOOL",
+    "postal_code":528933,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.723953,1.3300204 ]
+    },
+    "properties": {
+    "school_name":"JURONG SECONDARY SCHOOL",
+    "postal_code":618652,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.702099,1.3352564 ]
+    },
+    "properties": {
+    "school_name":"JURONG WEST SECONDARY SCHOOL",
+    "postal_code":648348,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7289078,1.3512887 ]
+    },
+    "properties": {
+    "school_name":"JURONGVILLE SECONDARY SCHOOL",
+    "postal_code":609790,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.6873103,1.3387228 ]
+    },
+    "properties": {
+    "school_name":"JUYING SECONDARY SCHOOL",
+    "postal_code":649038,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7648897,1.3012278 ]
+    },
+    "properties": {
+    "school_name":"KENT RIDGE SECONDARY SCHOOL",
+    "postal_code":127368,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7411907,1.3900511 ]
+    },
+    "properties": {
+    "school_name":"KRANJI SECONDARY SCHOOL",
+    "postal_code":689333,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8549838,1.3501713 ]
+    },
+    "properties": {
+    "school_name":"KUO CHUAN PRESBYTERIAN SECONDARY SCHOOL",
+    "postal_code":579795,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.9569446,1.3665842 ]
+    },
+    "properties": {
+    "school_name":"LOYANG VIEW SECONDARY SCHOOL",
+    "postal_code":519073,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.90172,1.3274713 ]
+    },
+    "properties": {
+    "school_name":"MANJUSRI SECONDARY SCHOOL",
+    "postal_code":408940,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7760081,1.4366443 ]
+    },
+    "properties": {
+    "school_name":"MARSILING SECONDARY SCHOOL",
+    "postal_code":739110,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.835360726863,1.36827266209722 ]
+    },
+    "properties": {
+    "school_name":"MAYFLOWER SECONDARY SCHOOL",
+    "postal_code":569384,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.948972483629,1.3672468492013 ]
+    },
+    "properties": {
+    "school_name":"MERIDIAN SECONDARY SCHOOL",
+    "postal_code":518901,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.783393009829,1.33294800935714 ]
+    },
+    "properties": {
+    "school_name":"METHODIST GIRLS' SCHOOL (SECONDARY)",
+    "postal_code":599986,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.888928372577,1.37396131656912 ]
+    },
+    "properties": {
+    "school_name":"MONTFORT SECONDARY SCHOOL",
+    "postal_code":538785,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.890004423764,1.38879582498399 ]
+    },
+    "properties": {
+    "school_name":"NAN CHIAU HIGH SCHOOL",
+    "postal_code":545079,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.768561446725,1.30809529518605 ]
+    },
+    "properties": {
+    "school_name":"NAN HUA HIGH SCHOOL",
+    "postal_code":129956,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.802420979943,1.33058326666479 ]
+    },
+    "properties": {
+    "school_name":"NANYANG GIRLS' HIGH SCHOOL",
+    "postal_code":288683,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.831050390247,1.41937881620441 ]
+    },
+    "properties": {
+    "school_name":"NAVAL BASE SECONDARY SCHOOL",
+    "postal_code":768689,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.77318863421,1.30977590011357 ]
+    },
+    "properties": {
+    "school_name":"NEW TOWN SECONDARY SCHOOL",
+    "postal_code":139657,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.956747262496,1.35447525755806 ]
+    },
+    "properties": {
+    "school_name":"NGEE ANN SECONDARY SCHOOL",
+    "postal_code":529283,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.899188813886,1.381131285358 ]
+    },
+    "properties": {
+    "school_name":"NORTH VISTA SECONDARY SCHOOL",
+    "postal_code":545081,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.845147332528,1.42081285020652 ]
+    },
+    "properties": {
+    "school_name":"NORTHBROOKS SECONDARY SCHOOL",
+    "postal_code":768692,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8401047,1.4358019 ]
+    },
+    "properties": {
+    "school_name":"NORTHLAND SECONDARY SCHOOL",
+    "postal_code":768578,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8557596,1.3191003 ]
+    },
+    "properties": {
+    "school_name":"NORTHLIGHT SCHOOL",
+    "postal_code":327830,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8378593,1.4153204 ]
+    },
+    "properties": {
+    "school_name":"ORCHID PARK SECONDARY SCHOOL",
+    "postal_code":768454,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8371273,1.2865136 ]
+    },
+    "properties": {
+    "school_name":"OUTRAM SECONDARY SCHOOL",
+    "postal_code":168622,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.9597283,1.3728407 ]
+    },
+    "properties": {
+    "school_name":"PASIR RIS CREST SECONDARY SCHOOL",
+    "postal_code":518934,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.9489627,1.3542274 ]
+    },
+    "properties": {
+    "school_name":"PASIR RIS SECONDARY SCHOOL",
+    "postal_code":529400,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8851201,1.3509676 ]
+    },
+    "properties": {
+    "school_name":"PAYA LEBAR METHODIST GIRLS' SCHOOL (SECONDARY)",
+    "postal_code":536742,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8784618,1.3903751 ]
+    },
+    "properties": {
+    "school_name":"PEI HWA SECONDARY SCHOOL",
+    "postal_code":797702,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8700108,1.3595159 ]
+    },
+    "properties": {
+    "school_name":"PEICAI SECONDARY SCHOOL",
+    "postal_code":556094,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8302161,1.3666595 ]
+    },
+    "properties": {
+    "school_name":"PEIRCE SECONDARY SCHOOL",
+    "postal_code":575566,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8431494,1.382012 ]
+    },
+    "properties": {
+    "school_name":"PRESBYTERIAN HIGH SCHOOL",
+    "postal_code":569845,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.9092138,1.4020574 ]
+    },
+    "properties": {
+    "school_name":"PUNGGOL SECONDARY SCHOOL",
+    "postal_code":828870,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.813190980055,1.29352126774652 ]
+    },
+    "properties": {
+    "school_name":"QUEENSTOWN SECONDARY SCHOOL",
+    "postal_code":148800,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.802207291625,1.30022271592188 ]
+    },
+    "properties": {
+    "school_name":"QUEENSWAY SECONDARY SCHOOL",
+    "postal_code":149295,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.84313404727,1.34217479932295 ]
+    },
+    "properties": {
+    "school_name":"RAFFLES GIRLS' SCHOOL (SECONDARY)",
+    "postal_code":318871,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7510345,1.3932791 ]
+    },
+    "properties": {
+    "school_name":"REGENT SECONDARY SCHOOL",
+    "postal_code":689621,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7883083,1.4411016 ]
+    },
+    "properties": {
+    "school_name":"RIVERSIDE SECONDARY SCHOOL",
+    "postal_code":738524,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.774011529322,1.31292810600277 ]
+    },
+    "properties": {
+    "school_name":"SCHOOL OF SCIENCE AND TECHNOLOGY, SINGAPORE",
+    "postal_code":138572,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8168433,1.4453151 ]
+    },
+    "properties": {
+    "school_name":"SEMBAWANG SECONDARY SCHOOL",
+    "postal_code":757704,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8983651,1.3865969 ]
+    },
+    "properties": {
+    "school_name":"SENG KANG SECONDARY SCHOOL",
+    "postal_code":545090,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8692704,1.3693258 ]
+    },
+    "properties": {
+    "school_name":"SERANGOON GARDEN SECONDARY SCHOOL",
+    "postal_code":555889,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.9021388,1.3746554 ]
+    },
+    "properties": {
+    "school_name":"SERANGOON SECONDARY SCHOOL",
+    "postal_code":534237,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.828165,1.3206341 ]
+    },
+    "properties": {
+    "school_name":"SINGAPORE CHINESE GIRLS' SCHOOL",
+    "postal_code":309437,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8041005,1.4370376 ]
+    },
+    "properties": {
+    "school_name":"SPECTRA SECONDARY SCHOOL",
+    "postal_code":737758,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.9303545,1.3495731 ]
+    },
+    "properties": {
+    "school_name":"SPRINGFIELD SECONDARY SCHOOL",
+    "postal_code":529593,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8662492,1.3306937 ]
+    },
+    "properties": {
+    "school_name":"ST. ANDREW'S SECONDARY SCHOOL",
+    "postal_code":359342,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.9419772,1.3346632 ]
+    },
+    "properties": {
+    "school_name":"ST. ANTHONY'S CANOSSIAN SECONDARY SCHOOL",
+    "postal_code":469700,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8760942,1.346488 ]
+    },
+    "properties": {
+    "school_name":"ST. GABRIEL'S SECONDARY SCHOOL",
+    "postal_code":556140,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.9376081,1.3497393 ]
+    },
+    "properties": {
+    "school_name":"ST. HILDA'S SECONDARY SCHOOL",
+    "postal_code":528986,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.80995114006,1.32006821363359 ]
+    },
+    "properties": {
+    "school_name":"ST. MARGARET'S SCHOOL (SECONDARY)",
+    "postal_code":259240,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.9176382,1.3078835 ]
+    },
+    "properties": {
+    "school_name":"ST. PATRICK'S SCHOOL",
+    "postal_code":429058,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7503962,1.3647175 ]
+    },
+    "properties": {
+    "school_name":"SWISS COTTAGE SECONDARY SCHOOL",
+    "postal_code":659322,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.9442638,1.349261 ]
+    },
+    "properties": {
+    "school_name":"TAMPINES SECONDARY SCHOOL",
+    "postal_code":529427,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8958201,1.3082128 ]
+    },
+    "properties": {
+    "school_name":"TANJONG KATONG GIRLS' SCHOOL",
+    "postal_code":439272,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8972252,1.3087352 ]
+    },
+    "properties": {
+    "school_name":"TANJONG KATONG SECONDARY SCHOOL",
+    "postal_code":438796,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.9475642,1.3159168 ]
+    },
+    "properties": {
+    "school_name":"TEMASEK SECONDARY SCHOOL",
+    "postal_code":465561,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.746021,1.4000153 ]
+    },
+    "properties": {
+    "school_name":"UNITY SECONDARY SCHOOL",
+    "postal_code":689143,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.9281976,1.3083081 ]
+    },
+    "properties": {
+    "school_name":"VICTORIA SCHOOL",
+    "postal_code":448880,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7601289,1.3878229 ]
+    },
+    "properties": {
+    "school_name":"WEST SPRING SECONDARY SCHOOL",
+    "postal_code":677737,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7017722,1.353737 ]
+    },
+    "properties": {
+    "school_name":"WESTWOOD SECONDARY SCHOOL",
+    "postal_code":648350,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8425524,1.3550521 ]
+    },
+    "properties": {
+    "school_name":"WHITLEY SECONDARY SCHOOL",
+    "postal_code":579747,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7960476,1.4283183 ]
+    },
+    "properties": {
+    "school_name":"WOODGROVE SECONDARY SCHOOL",
+    "postal_code":738990,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8001485,1.436489 ]
+    },
+    "properties": {
+    "school_name":"WOODLANDS RING SECONDARY SCHOOL",
+    "postal_code":739062,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.7745865,1.4391253 ]
+    },
+    "properties": {
+    "school_name":"WOODLANDS SECONDARY SCHOOL",
+    "postal_code":739111,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8830517,1.3725589 ]
+    },
+    "properties": {
+    "school_name":"XINMIN SECONDARY SCHOOL",
+    "postal_code":538789,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.842137,1.377976 ]
+    },
+    "properties": {
+    "school_name":"YIO CHU KANG SECONDARY SCHOOL",
+    "postal_code":569868,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.828764316679,1.42813324276086 ]
+    },
+    "properties": {
+    "school_name":"YISHUN SECONDARY SCHOOL",
+    "postal_code":768516,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.838094226361,1.43232156717386 ]
+    },
+    "properties": {
+    "school_name":"YISHUN TOWN SECONDARY SCHOOL",
+    "postal_code":768610,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.72089870437,1.34200635764467 ]
+    },
+    "properties": {
+    "school_name":"YUAN CHING SECONDARY SCHOOL",
+    "postal_code":618654,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.722687235839,1.34718626876968 ]
+    },
+    "properties": {
+    "school_name":"YUHUA SECONDARY SCHOOL",
+    "postal_code":649406,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.896275149571,1.40693702458178 ]
+    },
+    "properties": {
+    "school_name":"YUSOF ISHAK SECONDARY SCHOOL",
+    "postal_code":828676,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.890194755287,1.35713595302467 ]
+    },
+    "properties": {
+    "school_name":"YUYING SECONDARY SCHOOL",
+    "postal_code":538884,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.765510638527,1.38836583415352 ]
+    },
+    "properties": {
+    "school_name":"ZHENGHUA SECONDARY SCHOOL",
+    "postal_code":679962,
+    "mainlevel_code":"SECONDARY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.869430481414,1.34840720846208 ]
+    },
+    "properties": {
+    "school_name":"ZHONGHUA SECONDARY SCHOOL",
+    "postal_code":556123,
+    "mainlevel_code":"SECONDARY"
+    }
+  }
+]
+}

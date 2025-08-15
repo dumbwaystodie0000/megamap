@@ -2,6 +2,83 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom Google Maps InfoWindow styling */
+.gm-style .gm-style-iw-c {
+  margin: 0 !important;
+  padding: 0 !important;
+  min-width: 320px !important;
+  max-width: 340px !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+  border: 1px solid #e5e7eb !important;
+  background: white !important;
+  overflow: visible !important;
+  transform: translate3d(0,0,0) !important;
+}
+
+/* Remove padding from InfoWindow inner container */
+.gm-style .gm-style-iw-d {
+  overflow: hidden !important;
+  padding: 5px !important;
+  margin: 0 !important;
+}
+
+/* Specifically target the element in your screenshot */
+.gm-style-iw-ch {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Target only the direct container divs, not internal content */
+.gm-style .gm-style-iw-c > div:not(.relative) {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Allow our internal component elements to use their own padding */
+.gm-style .map-popup-content p,
+.gm-style .map-popup-content div.px-2,
+.gm-style .map-popup-content div.py-2 {
+  padding: inherit !important; /* Force our own padding values */
+}
+
+/* Special handling for header elements */
+.gm-style .map-popup-content div.px-2 {
+  padding-left: 0.5rem !important;
+  padding-right: 0.5rem !important;
+}
+
+.gm-style .map-popup-content div.py-2 {
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+}
+
+.gm-style .map-popup-content p.px-0 {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Hide default close button */
+.gm-style .gm-style-iw-t button[title="Close"] {
+  display: none !important;
+}
+
+/* Make InfoWindow tail smaller */
+.gm-style .gm-style-iw-t::after {
+  width: 6px !important;
+  height: 6px !important;
+  transform: translate(-50%, 0) rotate(45deg) !important;
+  top: -4px !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
+  background-color: white !important;
+  z-index: 1 !important;
+}
+
+/* Position the InfoWindow container slightly higher */
+.gm-style-iw.gm-style-iw-c {
+  margin-top: -8px !important;
+}
+
 @layer base {
   html {
     font-family: var(--font-sans);

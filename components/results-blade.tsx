@@ -1,8 +1,16 @@
 "use client"
 
-import { useState, useEffect } from "react"
-import { ChevronLeft, ChevronRight, LayoutGrid, List, Building, Globe } from "lucide-react"
+import { useState, useEffect, useCallback, useMemo } from "react"
+import { ChevronLeft, ChevronRight, LayoutGrid, List, Building, Globe, ArrowUpDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuLabel,
+  DropdownMenuRadioGroup,
+  DropdownMenuRadioItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
 import { PropertyCard } from "@/components/property-card"
 import { EnhancedBuildingCard } from "@/components/enhanced-building-card"
 import { PropertyRow } from "@/components/property-row"
@@ -43,64 +51,185 @@ export function ResultsBlade({
   showMap = true,
 }: ResultsBladeProps) {
   const [activeTab, setActiveTab] = useState("all")
+  const [sortOption, setSortOption] = useState<string>("")
+  
+  // Define sorting options for each view mode
+  const getSortOptions = useCallback(() => {
+    if (viewMode === "building") {
+      return [
+        { value: "name-asc", label: "Name (A-Z)" },
+        { value: "name-desc", label: "Name (Z-A)" },
+        { value: "active-listings-low", label: "Active Listings (Low-High)" },
+        { value: "active-listings-high", label: "Active Listings (High-Low)" },
+        { value: "total-units-low", label: "Total Units (Low-High)" },
+        { value: "total-units-high", label: "Total Units (High-Low)" },
+      ]
+    } else if (viewMode === "grid") {
+      return [
+        { value: "newest", label: "Newest" },
+        { value: "lowest-price", label: "Lowest Price" },
+        { value: "highest-price", label: "Highest Price" },
+        { value: "psf-low", label: "PSF (low-high)" },
+        { value: "psf-high", label: "PSF (high-low)" },
+        { value: "size-high", label: "Size (high-low)" },
+        { value: "size-low", label: "Size (low-high)" },
+      ]
+    } else {
+      // table view
+      return [
+        { value: "newest", label: "Newest" },
+        { value: "lowest-price", label: "Lowest Price" },
+        { value: "highest-price", label: "Highest Price" },
+        { value: "psf-low", label: "PSF (low-high)" },
+        { value: "psf-high", label: "PSF (high-low)" },
+        { value: "size-high", label: "Size (high-low)" },
+        { value: "size-low", label: "Size (low-high)" },
+      ]
+    }
+  }, [viewMode])
+  
+  // Set default sort option when view mode changes
+  useEffect(() => {
+    const options = getSortOptions()
+    if (options.length > 0) {
+      setSortOption(options[0].value)
+    }
+  }, [viewMode, getSortOptions])
+  
+  // Sort data based on selected sort option
+  const sortData = (data: any[], sortBy: string) => {
+    if (!sortBy || !data || data.length === 0) return data
+    
+    const sortedData = [...data]
+    
+    switch (sortBy) {
+      // Building view sorting
+      case "name-asc":
+        return sortedData.sort((a, b) => {
+          if (!a?.name || !b?.name) return 0
+          return a.name.localeCompare(b.name)
+        })
+      case "name-desc":
+        return sortedData.sort((a, b) => {
+          if (!a?.name || !b?.name) return 0
+          return b.name.localeCompare(a.name)
+        })
+      case "active-listings-low":
+        return sortedData.sort((a, b) => (a?.activeListings || 0) - (b?.activeListings || 0))
+      case "active-listings-high":
+        return sortedData.sort((a, b) => (b?.activeListings || 0) - (a?.activeListings || 0))
+      case "total-units-low":
+        return sortedData.sort((a, b) => (a?.totalUnits || 0) - (b?.totalUnits || 0))
+      case "total-units-high":
+        return sortedData.sort((a, b) => (b?.totalUnits || 0) - (a?.totalUnits || 0))
+      
+      // Grid and Table view sorting
+      case "newest":
+        return sortedData.sort((a, b) => {
+          const yearA = a?.year ? new Date(a.year).getTime() : 0
+          const yearB = b?.year ? new Date(b.year).getTime() : 0
+          return yearB - yearA
+        })
+      case "lowest-price":
+        return sortedData.sort((a, b) => {
+          const priceA = a?.price ? parseFloat(a.price.replace(/[^0-9.]/g, '')) || 0 : 0
+          const priceB = b?.price ? parseFloat(b.price.replace(/[^0-9.]/g, '')) || 0 : 0
+          return priceA - priceB
+        })
+      case "highest-price":
+        return sortedData.sort((a, b) => {
+          const priceA = a?.price ? parseFloat(a.price.replace(/[^0-9.]/g, '')) || 0 : 0
+          const priceB = b?.price ? parseFloat(b.price.replace(/[^0-9.]/g, '')) || 0 : 0
+          return priceB - priceA
+        })
+      case "psf-low":
+        return sortedData.sort((a, b) => (a?.psf || 0) - (b?.psf || 0))
+      case "psf-high":
+        return sortedData.sort((a, b) => (b?.psf || 0) - (a?.psf || 0))
+      case "size-high":
+        return sortedData.sort((a, b) => {
+          const sizeA = a?.size ? parseFloat(a.size.replace(/[^0-9.]/g, '')) || 0 : 0
+          const sizeB = b?.size ? parseFloat(b.size.replace(/[^0-9.]/g, '')) || 0 : 0
+          return sizeB - sizeA
+        })
+      case "size-low":
+        return sortedData.sort((a, b) => {
+          const sizeA = a?.size ? parseFloat(a.size.replace(/[^0-9.]/g, '')) || 0 : 0
+          const sizeB = b?.size ? parseFloat(b.size.replace(/[^0-9.]/g, '')) || 0 : 0
+          return sizeA - sizeB
+        })
+      
+      default:
+        return data
+    }
+  }
   
   // Get data based on current view mode and transaction type
-  const buildingData = generateBuildingResultsData(transactionType)
-  const propertyGridData = generatePropertyGridData(transactionType)
-  const propertyTableData = generatePropertyTableData(transactionType)
+  const buildingData = useMemo(() => generateBuildingResultsData(transactionType), [transactionType])
+  const propertyGridData = useMemo(() => generatePropertyGridData(transactionType), [transactionType])
+  const propertyTableData = useMemo(() => generatePropertyTableData(transactionType), [transactionType])
   
   // Filter data based on map synchronization
-  const filteredBuildingData = syncWithMap && visibleProjectIds.length > 0
-    ? buildingData.filter(building => visibleProjectIds.includes(building.id))
-    : buildingData
+  const filteredBuildingData = useMemo(() => {
+    return syncWithMap && visibleProjectIds.length > 0
+      ? buildingData.filter(building => visibleProjectIds.includes(building.id))
+      : buildingData
+  }, [buildingData, syncWithMap, visibleProjectIds])
     
-  const filteredPropertyGridData = syncWithMap && visibleProjectIds.length > 0
-    ? propertyGridData.filter(property => visibleProjectIds.includes(property.projectId))
-    : propertyGridData
+  const filteredPropertyGridData = useMemo(() => {
+    return syncWithMap && visibleProjectIds.length > 0
+      ? propertyGridData.filter(property => visibleProjectIds.includes(property.projectId))
+      : propertyGridData;
+  }, [propertyGridData, syncWithMap, visibleProjectIds])
     
-  const filteredPropertyTableData = syncWithMap && visibleProjectIds.length > 0
-    ? propertyTableData.filter(property => visibleProjectIds.includes(property.projectId))
-    : propertyTableData
+  const filteredPropertyTableData = useMemo(() => {
+    return syncWithMap && visibleProjectIds.length > 0
+      ? propertyTableData.filter(property => visibleProjectIds.includes(property.projectId))
+      : propertyTableData
+  }, [propertyTableData, syncWithMap, visibleProjectIds])
   
   // Filter by active tab
-  const getFilteredBuildingData = () => {
+  const getFilteredBuildingData = useCallback(() => {
+    let data = filteredBuildingData
     if (activeTab === "plb") {
-      return filteredBuildingData.filter(building => building.hasPLBUnits)
+      data = data.filter(building => building.hasPLBUnits)
     } else if (activeTab === "others") {
-      return filteredBuildingData.filter(building => building.hasOtherUnits)
+      data = data.filter(building => building.hasOtherUnits)
     }
-    return filteredBuildingData
-  }
+    return sortData(data, sortOption)
+  }, [filteredBuildingData, activeTab, sortOption])
   
-  const getFilteredPropertyGridData = () => {
+  const getFilteredPropertyGridData = useCallback(() => {
+    let data = filteredPropertyGridData
     if (activeTab === "plb") {
-      return filteredPropertyGridData.filter(property => property.agency === "PLB")
+      data = data.filter(property => property.agency === "PLB")
     } else if (activeTab === "others") {
-      return filteredPropertyGridData.filter(property => property.agency !== "PLB")
+      data = data.filter(property => property.agency !== "PLB")
     }
-    return filteredPropertyGridData
-  }
+    return sortData(data, sortOption)
+  }, [filteredPropertyGridData, activeTab, sortOption])
   
-  const getFilteredPropertyTableData = () => {
+  const getFilteredPropertyTableData = useCallback(() => {
+    let data = filteredPropertyTableData
     if (activeTab === "plb") {
-      return filteredPropertyTableData.filter(property => property.agency === "PLB")
+      data = data.filter(property => property.agency === "PLB")
     } else if (activeTab === "others") {
-      return filteredPropertyTableData.filter(property => property.agency !== "PLB")
+      data = data.filter(property => property.agency !== "PLB")
     }
-    return filteredPropertyTableData
-  }
+    return sortData(data, sortOption)
+  }, [filteredPropertyTableData, activeTab, sortOption])
   
   // Calculate counts for tabs based on view mode
-  const getCounts = () => {
+  const getCounts = useCallback(() => {
     if (viewMode === "building") {
       return {
-        all: filteredBuildingData.length,
-        plb: filteredBuildingData.filter(building => building.hasPLBUnits).length,
-        others: filteredBuildingData.filter(building => building.hasOtherUnits).length
+        all: buildingData.length, // Use base data, not filtered data
+        plb: buildingData.filter(building => building.hasPLBUnits).length,
+        others: buildingData.filter(building => building.hasOtherUnits).length
       }
     } else {
       // For grid and table views, count active listings
-      const allListings = viewMode === "grid" ? filteredPropertyGridData : filteredPropertyTableData
+      const allListings = viewMode === "grid" ? propertyGridData : propertyTableData
       const plbListings = allListings.filter(property => property.agency === "PLB")
       const othersListings = allListings.filter(property => property.agency !== "PLB")
       
@@ -110,9 +239,9 @@ export function ResultsBlade({
         others: othersListings.length
       }
     }
-  }
+  }, [viewMode, buildingData, propertyGridData, propertyTableData]) // Remove filtered data dependencies
   
-  const { all: allCount, plb: plbCount, others: othersCount } = getCounts()
+  const { all: allCount, plb: plbCount, others: othersCount } = useMemo(() => getCounts(), [getCounts])
 
   if (isCollapsed) {
     return (
@@ -160,26 +289,39 @@ export function ResultsBlade({
   return (
     <div className="h-full bg-white flex flex-col">
       {/* Header with Collapse Button and View Controls */}
-      <div className="p-4 border-b border-gray-200">
-        <div className="flex items-center justify-between mb-4">
-          <div>
-            <h2 className="text-lg font-semibold text-brand-text-dark">All Listings</h2> {/* Updated color */}
-            <p className="text-sm text-brand-text-dark/70">
+      <div className="p-3 sm:p-4 border-b border-gray-200">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
+          <div className="min-w-0">
+            <h2 className="text-base sm:text-lg font-semibold text-brand-text-dark truncate">All Listings</h2> {/* Updated color */}
+            <p className="text-xs sm:text-sm text-brand-text-dark/70 truncate">
               {syncWithMap && visibleProjectIds.length > 0 
                 ? `${allCount} ${viewMode === "building" ? "Buildings" : "Listings"} Found (Map View)` 
                 : `${allCount} ${viewMode === "building" ? "Buildings" : "Listings"} Found`}
             </p> {/* Updated color */}
           </div>
-          <div className="flex items-center space-x-2">
-            <Button
-              variant="outline"
-              size="sm"
-              className="rounded-lg bg-transparent text-brand-text-dark border-brand-text-dark/20 hover:bg-brand-background-light"
-            >
-              {" "}
-              {/* Updated colors */}
-              Sort
-            </Button>
+          <div className="flex items-center space-x-1 sm:space-x-2 flex-shrink-0">
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="rounded-lg bg-transparent text-brand-text-dark border-brand-text-dark/20 hover:bg-brand-background-light"
+                >
+                  <ArrowUpDown className="w-4 h-4" />
+                  Sort
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="w-56">
+                <DropdownMenuLabel>Sort By</DropdownMenuLabel>
+                <DropdownMenuRadioGroup value={sortOption} onValueChange={setSortOption}>
+                  {getSortOptions().map((option) => (
+                    <DropdownMenuRadioItem key={option.value} value={option.value}>
+                      {option.label}
+                    </DropdownMenuRadioItem>
+                  ))}
+                </DropdownMenuRadioGroup>
+              </DropdownMenuContent>
+            </DropdownMenu>
             <div className="flex items-center border border-gray-300 rounded-lg overflow-hidden">
               <Button
                 variant={viewMode === "building" ? "default" : "ghost"}
@@ -222,21 +364,21 @@ export function ResultsBlade({
         </div>
 
         {/* Tabs */}
-        <div className="flex items-center space-x-4 mt-4">
+        <div className="flex items-center space-x-2 sm:space-x-4 mt-4 overflow-x-auto">
           <button
             onClick={() => setActiveTab("all")}
-            className={`px-3 py-1 text-sm font-medium flex items-center space-x-1 ${
+            className={`px-2 sm:px-3 py-1 text-xs sm:text-sm font-medium flex items-center space-x-1 flex-shrink-0 ${
               activeTab === "all"
                 ? "text-brand-accent-orange border-b-2 border-brand-accent-orange"
                 : "text-brand-text-dark/70 hover:text-brand-primary-dark" // Updated colors
             }`}
           >
-            <Globe className="w-4 h-4" />
-            <span>All Listings ({allCount})</span>
+            <Globe className="w-3 h-3 sm:w-4 sm:h-4" />
+            <span className="truncate">All {viewMode === "building" ? "Buildings" : "Listings"} ({allCount})</span>
           </button>
           <button
             onClick={() => setActiveTab("plb")}
-            className={`px-3 py-1 text-sm font-medium ${
+            className={`px-2 sm:px-3 py-1 text-xs sm:text-sm font-medium flex-shrink-0 ${
               activeTab === "plb"
                 ? "text-brand-primary-dark border-b-2 border-brand-primary-dark"
                 : "text-brand-text-dark/70 hover:text-brand-primary-dark" // Updated colors
@@ -246,7 +388,7 @@ export function ResultsBlade({
           </button>
           <button
             onClick={() => setActiveTab("others")}
-            className={`px-3 py-1 text-sm font-medium ${
+            className={`px-2 sm:px-3 py-1 text-xs sm:text-sm font-medium flex-shrink-0 ${
               activeTab === "others"
                 ? "text-brand-text-dark border-b-2 border-brand-text-dark"
                 : "text-brand-text-dark/70 hover:text-brand-primary-dark" // Updated colors
@@ -299,7 +441,7 @@ function BuildingResults({
   showMap: boolean
 }) {
   return (
-    <div className={`p-4 ${showMap ? 'space-y-8' : 'grid grid-cols-3 gap-6'}`}>
+    <div className={`p-3 sm:p-4 ${showMap ? 'space-y-6 sm:space-y-8' : 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6'}`}>
       {buildings.map((building) => (
         <div key={building.id} onClick={() => onBuildingDetailsClick?.(building)}>
           <EnhancedBuildingCard
@@ -333,10 +475,13 @@ function GridResults({
   onSaveToCollection: (itemType: "property", itemData: any) => void
   showMap: boolean
 }) {
+  
   return (
-    <div className={`p-4 grid ${showMap ? 'grid-cols-1 gap-4' : 'grid-cols-3 gap-6'}`}>
+    <div className={`p-3 sm:p-4 grid ${showMap ? 'grid-cols-1 gap-4' : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6'}`}>
       {properties.map((property) => (
-        <div key={property.id} onClick={() => onPropertyDetailsClick?.(property)}>
+        <div key={property.id} onClick={() => {
+          onPropertyDetailsClick?.(property);
+        }}>
           <PropertyCard
             price={property.price}
             title={property.title}
@@ -367,8 +512,8 @@ function TableResults({ properties }: { properties: any[] }) {
 
   return (
     <div className="h-full overflow-auto">
-      <div className="p-4">
-        <div className="min-w-[1000px]">
+      <div className="p-3 sm:p-4">
+        <div className="min-w-[800px] sm:min-w-[1000px]">
           {/* Sticky Header */}
           <div
             className="sticky top-0 z-10 grid gap-4 py-2 text-sm font-medium text-brand-text-dark/70 border-b bg-brand-accent-blue-25 pl-4"
